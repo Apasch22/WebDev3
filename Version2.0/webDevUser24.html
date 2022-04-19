@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <!--Version 2.0
-        Name:
-        Date Completed:
+        Name:Trustin Oudomdy
+        Date Completed:April 15 2022
     -->
 
   <head>
@@ -20,7 +20,65 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <style></style>
+    <style>
+      #banner{
+        border: 25px outset rgb(185, 37, 37);
+        background-color: rgb(52, 187, 22);
+       text-align: center;
+      }
+
+      div#face {
+    width: 40vw;
+    height: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background: rgb(230, 8, 8);
+    margin-top: 2rem;
+}
+
+div#face, div#face * {
+    border-radius: 50%;
+}
+
+.eye {
+    width: 25%;
+    height: 25%;
+    background: rgb(5, 255, 117);
+    position: absolute;
+    top: 20%;
+}
+
+.left.eye {
+    left: 35%;
+}
+
+.right.eye {
+    right: 35%;
+}
+
+.pupil {
+    background: rgb(47, 0, 255);
+    width: 50%;
+    height: 50%;
+    position: relative;
+    left: 25%;
+    transform-origin: bottom;
+}
+
+#mouth {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 25%;
+    border: 1vw solid transparent;
+    border-radius: 50%;
+    top: 50%;
+    border-bottom-color: rgb(128, 0, 255);
+}
+  </style>
+  
   </head>
 
   <body>
@@ -36,8 +94,15 @@
         <h2>Heading Examples</h2>
 
         <!-- Put your Headings ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
-        <h1>I play basketball</h1>
-        <h2></h2>
+        <h1>I play football</h1>
+        <h2><h2>1st Point</h2>
+        <p>I am 15 years old and I go to Shakopee High School as a freshman</p>
+    </section>
+    
+    <section>
+        <h2>2nd Point</h2>
+        <p>I enjoy going to the gym to workout with my friends</p>
+    </section></h2>
         <h3></h3>
         <h4></h4>
         <h5></h5>
@@ -61,8 +126,19 @@
 
         <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
       </div>
-      <div id="banner"></div>
-      <div id="face"></div>
+      <div id="banner">Trustin loves football</div>
+      <div id="face"> <div class="left eye">
+        <div class="pupil">
+        </div>
+   </div>
+   <div class="right eye">
+        <div class="pupil">
+        </div>
+   </div>
+   <div id="mouth">
+   </div></div>
+
+
     </main>
 
     <footer>
