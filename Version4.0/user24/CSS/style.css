@@ -1,3 +1,4 @@
+@import url(rainbow.css);
 table {
 	font-family: "Marker Felt", "Comic Sans MS", fantasy;
 	color: #003366;
@@ -7,18 +8,15 @@ table {
 	border-collapse: collapse;
 	cellspacing: 0px;
 }
-
+p:first-child {
+	color: rgb(199, 24, 24);
+  }
 tr {
 	border: 1px solid #ffffff;
 	text-align: center;
 	background-color:#9FB6CD; 
 }
 
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
-}
 .button {
 	background-color: #4CAF50;
 	border: none;
@@ -69,11 +67,14 @@ h1, h2, h3, h4, h5, h6{
 	font-size: .5rem;
   }
   <span class="title title-large">Example of a Heading Title</span>
-<span class="title title-small">Example of a Footer Title</span>
+
+
+  <span class="title title-small">Example of a Footer Title</span>
 #morecontent {
 	background-color: yellow;
-  }
-  *{
-    text-align:right;
+}
+  
+*{
+    text-align:center;
     border: 2px solid black;
 }
