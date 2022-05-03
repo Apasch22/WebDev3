@@ -7,7 +7,7 @@
 
 <head>
 
-    <title>Web Development Candidates</title>
+    <title>My Work as a Web Developer</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -16,13 +16,8 @@
     <meta name="description" content="WebDev Version 4.0">
 
     <!-- CSS -->
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- Custom -->
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- JavaScript -->
@@ -32,8 +27,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <style type="text/css">
-        menu {
+        <style>
+    menu {
             margin: 0;
             padding: 0;
         }
@@ -47,35 +42,33 @@
             text-align: center;
         }
 
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            width: 32%;
-            margin-bottom: .6em;
-            display: inline;
-            display: inline-block;
+        #rainbow {
+            width: 100%;
         }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .nameplate {
-            padding: 2px 16px;
-            font-size: 2vw;
-        }
-
-        .paragraph {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .orange {
-            color: orange;
-        }
-        .paragraph p {
-	        font-family: Arial, Helvetica, sans-serif;
-	        display: inline;
-        }
+        #knowledge > * {
+  border: 3px red solid;
+}
+p + * {
+  background-color: #FFFF00;
+}
+div li::marker{
+  color: red;
+}
+div li::marker{
+  content:"💀";
+}
+td:hover {
+    background-color: black;
+  }
+  li:hover {
+  background-color: rgb(98, 0, 255);
+}
+p:hover {
+  background-color: rgb(255, 255, 255);
+}
+strong:hover {
+  background-color: rgb(255, 0, 0);
+}
     </style>
 </head>
 
@@ -92,8 +85,8 @@
                 <div class="navbar-nav">
                     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="display.html" class="nav-item nav-link active">Display</a>
-                    <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                    <a href="display.html" class="nav-item nav-link">Display</a>
+                    <a href="portfolio.html" class="nav-item nav-link active">Portfolio</a>
                     <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                     <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                 </div>
@@ -107,51 +100,59 @@
 
     <main class="wideMargin">
 
-        <h1 class="text-left my-3 title" tabindex="0">Hiring Page</h1>
+        <h1 class="text-left my-3 title" tabindex="0">Check out my work!</h1>
         <!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <div class="paragraph">
-            <p>We at HireMe.com have one true belief. We believe in people. Since 1964, we have connected the best
-                people,
-                their talents, skills, career goals, and aspirations with the best companies. We are
-            <p class="orange">"Career Gurus."</p> We are <span class="orange">"People-People."</span> Let us introduce you!
-            </p>
+        <h3 id="topHeading">I'm a Web Developer</h3>
+        <div id="knowledge">
+            <li>CSS
+                <ul>
+                    <li>Classes</li>
+                    <li>Selectors</li>
+                    <li>ID's</li>
+                </ul>
+            </li>
+            <li>HTML
+                <ul>
+                    <li>Tables</li>
+                    <li>DIV's</li>
+                    <li>Nav Bar</li>
+                </ul>
+            </li>
         </div>
-
-        <h2>People</h2>
-
-        <div class="card">
-            <img src="https://github.com/rmainhar/SHS_WebDevelopment/blob/master/Version4.0/user00/images/img_avatar.png?raw=true"
-                alt="Avatar John" style="width:100%;">
-            <div class="nameplate">
-                <h4 style="font-size:2vw"><b>John Doe</b></h4>
-                <p style="font-size:1.61vw">Architect & Engineer</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://github.com/rmainhar/SHS_WebDevelopment/blob/master/Version4.0/user00/images/img_avatar2.png?raw=true"
-                alt="Avatar Jane"
-                width="100%">
-            <div class="nameplate">
-                <h4 style="font-size:2vw"><b>Jane Doe</b></h4>
-                <p style="font-size:1.61vw">Computer Scientist</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://github.com/rmainhar/SHS_WebDevelopment/blob/master/Version4.0/user00/images/img_avatar3.png?raw=true"
-                alt="Avatar Linux" style="width:100%;">
-            <div class="nameplate">
-                <h4 style="font-size:2vw"><b>Sir Linux Penguin</b></h4>
-                <p style="font-size:1.61vw">Senior Computer Network Architect</p>
-            </div>
+        <p>
+            These are the things I know in the <strong>WEB DEVELOPMENT</strong> <u>world</u>.
+        </p>
+        <p>
+            I will use my knowledge to create an amazing website for you and your needs.
+        </p>
+        <div>
+            <table id="rainbow">
+                <tr>
+                    <td class="background-red">
+                    </td>
+                    <td class="background-orange">
+                    </td>
+                    <td class="background-yellow">
+                    </td>
+                    <td class="background-green">
+                    </td>
+                    <td class="background-blue">
+                    </td>
+                    <td class="background-indigo">
+                    </td>
+                    <td class="background-violet">
+                    </td>
+                </tr>
+            </table>
         </div>
         <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
     </main>
 
     <!---------------------------------- Begin the footer ------------->
     <footer>
-        <span class="title">Check us out on our Social</span>
+        <span class="title">Example of a Footer Title</span>
         <table id="footerTable">
             <tr>
                 <td>
