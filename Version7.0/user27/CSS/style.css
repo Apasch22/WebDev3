@@ -49,12 +49,12 @@ h5 {font-family: "Fjalla One", sans-serif;
     margin-bottom: 2em;
 
 }
-P {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 2em;
-    font-weight: 400;
-    border-bottom: 1px solid black;
-    margin-bottom: 1em;
-    font-size:large;
-    font-display: color white;
-}
+
+p {
+    padding-top: 5px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 5px;
+    background-color: rgb(37, 86, 115);
+   text-decoration-color: white;
+  }
