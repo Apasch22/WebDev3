@@ -155,62 +155,7 @@
                         4</button>
                 </div>
 
-                <div class="col-md-5">
-                    <h1>My shopping list</h1>
-
-                    <div>
-                        <label for="item">Enter a new item:</label>
-                        <input type="text" name="item" id="item">
-                        <button id="aggregating-list">Add item</button>
-                    </div>
-
-                    <ul>
-
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-        <script id="lists">
-            function firstSelector() {
-                document.querySelector("li").style.backgroundColor = "#dc3545";
-            }
-            function secondSelector() {
-                var x = document.querySelectorAll("li");
-                var i;
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.backgroundColor = "#17a2b8";
-                }
-            }
-            function thirdSelector() {
-                document.querySelector("ol ol li").style.backgroundColor = "#6c757d";
-            }
-        </script>
-        <script id="shopping">
-            const list = document.querySelector('ul');
-            const input = document.querySelector('input');
-            const button = document.getElementById('aggregating-list');
-
-            button.onclick = function () {
-                let myItem = input.value;
-                input.value = '';
-
-                const listItem = document.createElement('li');
-                const listText = document.createElement('span');
-                const listBtn = document.createElement('button');
-
-                listItem.appendChild(listText);
-                listText.textContent = myItem;
-                listItem.appendChild(listBtn);
-                listBtn.textContent = 'Delete';
-                list.appendChild(listItem);
-
-                listBtn.onclick = function (e) {
-                    list.removeChild(listItem);
-                }
-
-                input.focus();
-            }
+               
         </script>
     </main>
     <div id="container" style="height: 3000px; width: 1000px;">
