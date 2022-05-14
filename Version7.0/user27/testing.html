@@ -193,6 +193,41 @@
                 <h4><b>Sir Linux Penguin</b></h4>
                 <p>Senior Computer Network Architect</p>
             </div>
+
+            <div id="container" style="height: 3000px; width: 1000px;">
+                <a href="#"><button type="button" id="focusButton" style="margin-top: 3000px;">You focused on me!</button></a>
+            </div>
+
+            <script id="shopping">
+                const list = document.querySelector('ul');
+                const input = document.querySelector('input');
+                const button = document.getElementById('aggregating-list');
+    
+                button.onclick = function () {
+                    let myItem = input.value;
+                    input.value = '';
+    
+                    const listItem = document.createElement('li');
+                    const listText = document.createElement('span');
+                    const listBtn = document.createElement('button');
+    
+                    listItem.appendChild(listText);
+                    listText.textContent = myItem;
+                    listItem.appendChild(listBtn);
+                    listBtn.textContent = 'Delete';
+                    list.appendChild(listItem);
+    
+                    listBtn.onclick = function (e) {
+                        list.removeChild(listItem);
+                    }
+    
+                    input.focus();
+                }
+            </script>
+
+            
+
+
         </div>
         <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
     </main>
