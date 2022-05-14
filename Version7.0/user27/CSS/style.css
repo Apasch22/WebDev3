@@ -35,9 +35,28 @@ li li li li {
 
 h1 {
     font-family: "Fjalla One", sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+h5 {font-family: "Fjalla One", sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 480;
+    border-bottom: 1px solid rgb(62, 62, 62);
+    margin-bottom: 2em;
+
+}
+P {
+    font-family: "Fjalla One", sans-serif;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 400;
     border-bottom: 1px solid black;
     margin-bottom: 1em;
+    font-size:large;
+    font-display: color white;
+
 }
