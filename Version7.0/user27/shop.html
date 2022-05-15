@@ -48,33 +48,102 @@
                 margin: 15px;
             }
     
-            footer {
-                font-size: 12px;
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: rgb(52, 58, 64);
+                color: white;
                 text-align: center;
             }
+
+
+    * {
+    box-sizing: border-box;
+    }
+
+    /* Create three columns of equal width */
+    .columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+    }
+
+    /* Style the list */
+    .price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    }
+
+    /* Add shadows on hover */
+    .price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+    }
+
+    /* Pricing header */
+    .price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+    }
+
+    /* List items */
+    .price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    }
+
+    /* Grey list item */
+    .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+    }
+
+    /* The "Sign Up" button */
+    .button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    }
+
+    /* Change the width of the three columns to 100%
+    (to stack horizontally on small screens) */
+    @media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+    }
+
+
         </style>
-        <div class="menu">
+</head>
+
+<body background="images/coffeebeansbackground.jpeg">
+    <!---------------------------------- Begin the nav-bar ------------->
+    <div class="menu">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a href="http://shakonet.isd720.com" class="navbar-brand">Cuprizz Coffee</a>
+            <a href="contactus.html" class="navbar-brand" style="color:bisque" >Cuprizz Coffee</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-</head>
-
-<body>
-    <!---------------------------------- Begin the nav-bar ------------->
-
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="shop.html" class="nav-item nav-link active">Shop</a>
-                    <a href="aboutCuprizz.html" class="nav-item nav-link active">About Cuprizz</a>
-                    <a href="contactus.html" class="nav-item nav-link active">Contact us</a>
-                    <a href="login.html" class="nav-item nav-link active">Log In</a>
-                    <a href="Cuprizzcoffee@gmail.com" class="nav-item nav-link disabled"
-                    
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="shop.html" class="nav-item nav-link active ">Shop</a>
+                    <a href="aboutCuprizz.html" class="nav-item nav-link ">About Cuprizz</a>
+                    <a href="contactus.html" class="nav-item nav-link ">Contact us</a>
                     <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                 </div>
                 
@@ -82,84 +151,61 @@
             </div>
         </nav>
     </div>
-<div>
-    
-</div>
 
-    <body>
-         <body style="background-color:rgb(129, 79, 48);">
-    <div class="col-md-5">
-        <label for="item"><h1 style="color:rgb(255, 255, 255);">Shoping Time</h1></label>
-    
-        <div>
-            <label for="item"><p style="color:rgb(255, 255, 255);">Enter a new item</p></label>
-            <input type="text" name="item" id="item">
-            <button id="aggregating-list">Add item</button>
-            
-
-            <table>
-                <thead>
-                    <tr>
-                        <tr>
-                            <th>
-                                <div class="card">
-                                <img src="images/coffee/brazil.jpg" alt="Brazil Coffee" width="298"> 
-                                <div class="nameplate">
-                                    <h3><b>$8.00-$16.00</b></h3>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="card">
-                                    <img src="images/coffee/etheopia.jpg" width="300"> 
-                                    <div class="nameplate">
-                                        <h3><b>$8.00-$16.00</b></h3>
-                                    </div>
-                            </th>
-                            <th>
-                                <div class="card">
-                                    <img src="images/coffee/colombia.jpg" width="295">
-                                    <div class="nameplate">
-                                        <h3><b>$8.00-$16.00</b></h3>
-                                    </div>
-                            </th>
-                            <th>
-                                <div class="card">
-                                    <img src="images/coffee/guatemala.jpg" width="300">
-                                    <div class="nameplate">
-                                        <h3><b>$8.00-$16.00</b></h3>
-                                    </div>
-                            </th>
-                        </tr>
-                    </tr>
-                </thead>
-               
-            </table>
-            
-             <footer>
-                <span class="title">Check us out on our Social</span>
-                <table id="footerTable">
-                    <tr>
-                        <td>
-                            <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
-                        </td>
-                        <td>
-                            <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-                        </td>
-                        <td>
-                            <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-                        </td>
-                    </tr>
-                </table>
-
-
-            <img src="images/coffee/brazil.jpg" alt="Brazil Coffee" width="400"> 
-            <img src="images/coffee/etheopia.jpg" width="400"  lang="3000">
-            <img src="images/coffee/colombia.jpg" width="400">
-            <img src="images/coffee/guatemala.jpg" width="400">
-        </div>
-    
-        <ul>
-    
+ 
+    <div class="columns">
+        <ul class="price">
+        <li class="header">ETHIOPIA</li>
+        <li class="grey">$ 18.00 / LB</li>
+        <li><img src="images/coffee/etheopia.jpg" alt=""></li>
+        <li>Light Roast</li>
+        <li class="grey"><a href="#" class="button">BUY NOW</a></li>
         </ul>
     </div>
-    <body>
+
+    <div class="columns">
+        <ul class="price">
+        <li class="header">GUATEMALA</li>
+        <li class="grey">$ 17.00 / LB</li>
+        <li><img src="images/coffee/guatemala.jpg"></li>
+        <li>Medium Roast</li>
+        <li class="grey"><a href="#" class="button">BUY NOW</a></li>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <ul class="price">
+        <li class="header">BRAZIL</li>
+        <li class="grey">$ 16.00 / LB</li>
+        <li><img src="images/coffee/brazil.jpg" alt=""></li>
+        <li>Dark Roast</li>
+        <li class="grey"><a href="#" class="button">BUY NOW</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<footer class="footer">
+     
+    <table id="footerTable">
+        <tr style="display: block; margin-left: auto; margin-right: auto;">
+            <span style="left: 0%;">Check us out on our Social</span>
+            <td>
+                <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+            </td>
+            <td>
+                <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+            </td>
+            <td>
+                <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+            </td>
+        </tr>
+    </table>
+
+  </footer>
+
+</body>
+    
+
+</html>
+        

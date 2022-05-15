@@ -49,9 +49,9 @@ h5 {font-family: "Fjalla One", sans-serif;
     margin-bottom: 2em;
 
 }
-P {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 2em;
+P1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    font-size: 4em;
     text-transform: uppercase;
     font-weight: 400;
     border-bottom: 1px solid black;
@@ -60,3 +60,88 @@ P {
     font-display: color white;
 
 }
+
+P2 {
+    font-family: 'Lucida Grande', 'Lucida Grande', sans-serif;
+    font-size: x-large;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-display: color rgb(41, 14, 14); 
+
+}
+
+P3 {
+  font-family: 'Lucida Grande', sans-serif;
+  font-size:xx-large;
+  font-style:oblique;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-display: color rgb(41, 14, 14); 
+
+}
+
+P4 {
+  font-family: 'Lucida Grande', sans-serif;
+  font-size:24px;
+  font-style:normal;
+  font-weight: 200;
+  font-display: color white; 
+}
+
+
+.button0 {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+
+  .btn-group button {
+    background-color: #04AA6D; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+
