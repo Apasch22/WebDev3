@@ -1,17 +1,16 @@
 
-    
-function myFunc(theObject) {
-    theObject.make = 'Toyota';
-  }
-  
-  var mycar = {make: 'Honda', model: 'Accord', year: 1998};
-  var x, y;
-  
-  x = mycar.make; // x gets the value "Honda"
-  
-  myFunc(mycar);
-  y = mycar.make; // y gets the value "Toyota"
-                  // (the make property was changed by the function)
+script 
+type="text/javascript">
+ function validateEmail(theForm) {
+ if (/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/.test(theForm.email-id.value)){
+ return(true);
+ }
+ alert("Invalid e-mail address! Please enter again carefully!.");
+ return(false);
+ }
+ </script>
 
-
-
+ if(document.getElementById('<a href="#" class="button">BUY NOW</a>').clicked == true)
+{
+   alert("button was clicked");
+}
