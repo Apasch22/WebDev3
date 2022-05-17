@@ -90,6 +90,16 @@ P4 {
 }
 
 
+P7 {
+  padding: 50px;
+  border: 1px solid #ececec;
+  background-color: bisque;
+  color: black;
+  margin-bottom: 20px;
+}
+
+
+
 .button0 {
     border: none;
     color: white;
