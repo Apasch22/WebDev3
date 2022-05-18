@@ -5,7 +5,7 @@ table {
 	margin-right: auto;
 	text-align: left;
 	border-collapse: collapse;
-	cellspacing: 0px;
+	
 }
 
 tr {
@@ -19,3 +19,8 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+body {background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFzobwNNigHWiGZtgtXbBU0uR-SZTij9XOcE3eVHofnc90KfeHheMlMAU5k5m8Ct4ogFE:https://wallpapercave.com/wp/wp7952905.jpg&usqp=CAU");}
+
+ul {
+	list-style-image: url("https://hnet.com/png-to-jpg/download/20220422-05-j8ZATysP6HX5A0H2-ayPeBv/10101010101010101010_wmXyS.jpg");}
+	

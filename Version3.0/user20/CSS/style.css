@@ -19,3 +19,17 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+strong {
+	margin: 50px;
+	background-color: lightblue;
+  }
+strong {
+	padding: 50px;
+	background-color: lightblue;
+  }
+  p{
+	padding: 5px 50px 30px 5px;
+	background-color: lavender;
+	margin-top: 25px;
+	margin-bottom50px;
+	}

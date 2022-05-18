@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>History</title>
+
+    <!-- Bootstrap meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Introduction to JavaScript">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="images/donut.ico" />
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/SampleJS.js"></script>
+
+    <style>
+        /* Internal Styling Here */
+    </style>
+
+</head>
+
+<body>
+    <main>
+            <section>
+             <div class="menu">
+                <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+                    <a href="http://shakonet.isd720.com" class="navbar-brand">Donuts!</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="History.html" class="nav-item nav-link active">History</a>
+                            <a href="Top5.html" class="nav-item nav-link" tabindex="-1">Top 5</a>
+                            <a href="Shops.html" class="nav-item nav-link" tabindex="-1">Shops</a>
+                            <a href="Gallery.html" class="nav-item nav-link" tabindex="-1">Gallery</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            </section>
+        <hr>
+        <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1>History</h1>
+                    <h3>So, how were these delicious pastries created?</h3>
+                    <h4>According to Wikipedia...</h4>
+                <p>
+                    The cookbook ”Küchenmeisterei (Mastery of the Kitchen)", published in Nuremberg, in 1485, offers a recipe for ”Gefüllte Krapfen”, sugar free, stuffed, fried dough cakes.
+Dutch settlers brought olykoek ("oil(y) cake") to New York (or New Amsterdam). These doughnuts closely resembled later ones but did not yet have their current ring shape.
+A recipe labelled "dow nuts", again from Hertfordshire, was found in a book of recipes and domestic tips written around 1800, by the wife of Baron Thomas Dimsdale, the recipe being given to the dowager Baroness by an acquaintance who transcribed for her the cooking instructions for a "dow nut".
+The first cookbook, using the near conventional "dough nuts" spelling, was possibly the 1803, New York, edition, of "The Frugal Housewife: or, Complete Woman Cook", which included dough nuts in an appendix of American recipes.
+In Cuisine and Culture: A History of Food and People, culinary historian Linda Civitello writes that the hole was invented because it allowed the doughnuts to cook faster. By 1870 doughnut cutters shaped in two concentric circles, one smaller than the other, began to appear in home-shopping catalogues".
+                </p>
+                </div>
+                <img src="images/OldDough.jpeg" class="center"
+                style= "height: 50vw; width: 50vw"
+                />
+                </div>
+<div class="row-cols-md-1 text-center">
+    <h3>Pop Quiz:</h3>
+    <h2>When did donuts get their holes?</h2>
+                <input class="buttonQuiz" type="button" onclick="Ans1()" value="1920">
+                <input class="buttonQuiz" type="button"  onclick="Ans2()" value="1870">
+                <input class="buttonQuiz" type="button"  onclick="Ans3()" value="1970">
+                <input class="buttonQuiz" type="button"  onclick="Ans4()" value="1850">
+                <p id="myText"><strong>?</strong></p>
+</div>
+            </div>
+            </section>
+    </main>
+</body>
+
+</html>

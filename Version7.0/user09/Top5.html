@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <title>Top 5</title>
+
+    <!-- Bootstrap meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Introduction to JavaScript">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="images/donut.ico" />
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/SampleJS.js"></script>
+
+    <style>
+        /* Internal Styling Here */
+    </style>
+
+</head>
+
+<body>
+    <main>
+      <section>
+             <div class="menu">
+                <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+                    <a href="http://shakonet.isd720.com" class="navbar-brand">Donuts!</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="History.html" class="nav-item nav-link">History</a>
+                            <a href="Top5.html" class="nav-item nav-link active" tabindex="-1">Top 5</a>
+                            <a href="Shops.html" class="nav-item nav-link" tabindex="-1">Shops</a>
+                            <a href="Gallery.html" class="nav-item nav-link" tabindex="-1">Gallery</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+      </section>
+        <hr>
+        <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 text-center center bolded">
+                    <h1>My Top 5 Favorite Donuts</h1>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Rank</th>
+                          <th>Donut Type</th>
+                          <th>Toppings</th>
+                          <th>Picture</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td>1</td>
+                        <td>Long John</td>
+                        <td>Chocolate Icing, Bavarian Cream Filling</td>
+                        <td>
+                          <img
+                            src="images/ChLong.jpeg"
+                            style="width: 50%; height: 50%"
+                            alt="Chocolate iced long john"
+                            onmouseover="bigImg2(this)" onmouseout="normalImg2(this)"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Long John</td>
+                        <td>Maple Icing, Bacon</td>
+                        <td>
+                          <img
+                            src="images/Maple-Bacon-long-john-2-2-600x483.png"
+                            style="width: 50%; height: 50%"
+                            alt="Maple iced long john topped with a piece of bacon"
+                            onmouseover="bigImg2(this)" onmouseout="normalImg2(this)"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Classic (X-Large)</td>
+                        <td>Pink icing, Sprinkles</td>
+                        <td>
+                          <img
+                            src="images/bigpink.jpeg"
+                            style="width: 50%; height: 50%"
+                            alt="Giant donut with pink icing and sprinkles"
+                            onmouseover="bigImg2(this)" onmouseout="normalImg2(this)"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Donut Sundae</td>
+                        <td>Ice Cream, Icing, Sprinkles, Whipped Cream</td>
+                        <td>
+                          <img
+                            src="images/ice.jpeg"
+                            style="width: 50%; height: 50%"
+                            alt="Donut ice cream sundae"
+                            onmouseover="bigImg2(this)" onmouseout="normalImg2(this)"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Old Fashioned</td>
+                        <td>Glazed, Blueberry</td>
+                        <td>
+                          <img
+                            src="images/blueberry-old-fashioned.jpeg"
+                            style="width: 50%; height: 50%"
+                            alt="Blueberry old fashioned donut"
+                            onmouseover="bigImg2(this)" onmouseout="normalImg2(this)"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+
+            </div>
+        </div>
+      </section>
+    </main>
+</body>
+
+</html>
