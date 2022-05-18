@@ -1,21 +1,132 @@
+@import url(rainbow.css);
+.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button-largeRadius {
+	border-radius: 8px;
+}
+
+.button-smallRadius {
+	border-radius: 30%;
+}
+
+.red {
+	background-color: #ff0000;
+}
+
+.button3 {
+	border: 3px solid black;
+	color: black;
+}
+
+.button3a:after {
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+.button3a:hover,
+.button3a:active {
+	color: #0e83cd;
+}
+
+.button3a:hover:after,
+.button3a:active:after {
+	height: 100%;
+}
+
+.button4 {
+	background: #cb4e4e;
+	color: #fff;
+	box-shadow: 0 6px #ab3c3c;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.button5 {
+	color: #fff;
+	background: #226fbe;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.button5:active {
+	top: 2px;
+}
+
+.button5a {
+	border: 4px double #226fbe;
+	border-radius: 60px;
+}
+
+.button5a:hover {
+	background: transparent;
+	color: #226fbe;
+}
+
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+td {
+	padding: 20px;
+}
+
 table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
 }
 
-tr {
-	border: 1px solid #ffffff;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	text-align: center;
-	background-color:#9FB6CD; 
 }
 
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+.title {
+	color: red;
+	font-family: 'Trebuchet MS', sans-serif;
 }
+
+.title-large {
+	font-size: 2rem;
+}
+
+.title-small {
+	font-size: .5rem;
+}
+
+#morecontent {
+	background-color: yellow;
+}
+
+#hireButtons {
+	background-color: yellow;
+}
+
+#footerTable {
+	background-color: red;
+}
+
+* {
+	color:#0e83cd;
+}
+

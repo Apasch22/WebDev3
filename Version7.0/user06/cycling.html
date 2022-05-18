@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cycling!</title>
+    <link rel="icon" type="image/x-icon" href="/Version3.0/user06/images/apple-touch-icon-120x120.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+    <script src="script.js" defer></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Version 3.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        .menu {
+            margin: 0px;
+
+        }
+
+        .wideMargin {
+            margin: 15px;
+        }
+
+        footer {
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">Activity 1.7</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <a href="home.html" class="nav-item nav-link">Home</a>
+                    <a href="bowling.html" class="nav-item nav-link">Bowling</a>
+                    <a href="cycling.html" class="nav-item nav-link active" tabindex="-1">Cycling</a>
+                    <a href="gaming.html" class="nav-item nav-link" tabindex="-1">Gaming</a>
+                    <!----------------------------------^ Edit These Items in your Menu ^ ------------->
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="form.html" class="nav-item nav-link">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="toggle-container">
+        <input type="checkbox" id="toggle" name="toggle" /><label for="toggle"></label>
+    </div>
+    <main>
+        <center>
+            <h2 class="my-10">Cycling</h2>
+        </center>
+        <center>
+            <h1 style="color:turquoise; font-size:xxx-large;">Quiz Time!</h1>
+        </center>
+        <center>
+            <div id="questions">
+                <h4>What is the longest one day professional bike race? (in miles)</h4>
+            </div>
+        </center>
+        <script>
+            function wrong() {
+                alert("Not quite! Try again!");
+            }
+            function right() {
+                alert("Correct! You're a genius!")
+            }
+        </script>
+        <center>
+            <div id="q1">
+                <button type="button" id="questions" onclick="wrong()">120 miles</button>
+                <br>
+                <button width="20px" id="answer" onclick="wrong()">140 miles</button>
+                <br>
+                <button id="answer" onclick="right()">160 miles</button>
+                <br>
+                <button id="answer" onclick="wrong()">190 miles</button>
+                <br>
+            </div>
+        </center>
+        <br>
+        <center>
+            <div id="questions">
+                <h4>What is the fastest speed achieved on a bike?</h4>
+            </div>
+            <div id="q2">
+                <button onclick="wrong()">173 mph</button><br>
+                <button onclick="right()">184 mph</button><br>
+                <button onclick="wrong()">192 mph</button><br>
+                <button onclick="wrong()">207 mph</button><br>
+            </div>
+            <br>
+        </center>
+        <center>
+            <div id="questions">
+                <h4>Who invented the bike?</h4>
+            </div>
+            <div id="q3">
+                <button onclick="wrong()">John Kemp Starley</button><br>
+                <button onclick="right()">Karl von Drais</button><br>
+                <button onclick="wrong()">Marius Olivier</button><br>
+                <button onclick="wrong()">Pierre Michaux</button><br>
+            </div>
+            <br>
+        </center>
+        <center>
+            <div id="questions">
+                <h4>What was the fastest time someone has biked across America?</h4>
+            </div>
+            <div id="q4">
+                <button onclick="wrong()">6 days, 2 hours, 19 minutes</button><br>
+                <button onclick="wrong()">6 days, 19 hours, 11 minutes</button><br>
+                <button onclick="wrong()">7 days, 11 hours, 43 minutes</button><br>
+                <button onclick="right()">7 day, 15 hours, 56 minutes</button><br>
+            </div>
+            <br>
+        </center>
+        <center>
+            <div id="questions">
+                <h4>How fast has someone biked around the world?</h4>
+            </div>
+            <div id="q5">
+                <button onclick="right()">79 days</button><br>
+                <button onclick="wrong()">91 days</button><br>
+                <button onclick="wrong()">134 days</button><br>
+                <button onclick="wrong()">155 days</button><br>
+            </div>
+            <br>
+        </center>
+    </main>
+
+</body>
+<div class="footer-copyright text-center py-3">© 2022 Copyright: Kevin Doan
+</div>
+
+</html>

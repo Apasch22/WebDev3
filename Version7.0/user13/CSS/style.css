@@ -33,11 +33,84 @@ li li li li {
     list-style-type: circle;
 }
 
-h1 {
+h1.solid {
     font-family: "Fjalla One", sans-serif;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 400;
-    border-bottom: 1px solid black;
-    margin-bottom: 1em;
+    border-style: solid;
+    display: inline-block;
+    background-color: black;
+    margin-top: 20px;
+    color: lime;
+    font-size: 35pt;
+    margin-left: 20px;
+}
+
+h2.solid {
+    color: lightgreen;
+    text-align: center;
+}
+
+p.solid {
+
+    color: white;
+    width: 1000px;
+    height: 250px;
+    font-size: 15pt;
+}
+
+body {
+    background-color: black;
+}
+
+.banner {
+    background-image:
+        url(https://content.api.news/v3/images/bin/b474137f607983704dbb757b6b23c0a9);
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: lime;
+    height: 300px;
+}
+
+.pc {
+    background-image: url(https://www.corsair.com/us/en/medias/sys_master/images/images/h17/hf7/9618137710622/CS-9050009-NA/Gallery/Vengeance_A7200_01/-CS-9050009-NA-Gallery-Vengeance-A7200-01.png_515Wx515H);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.cafe {
+    background-image: url(https://resources.esportsinsider.com/esportsinsider/2019/01/Wanyoo-UK-2.jpeg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+table {
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    color: #003366;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+tr {
+    border: 1px solid #ffffff;
+    text-align: center;
+    background-color: #9FB6CD;
+}
+
+th {
+    text-align: center;
+    color: #ffffff;
+    background-color: #003366;
+}
+
+td {
+    font-size: 25pt;
 }

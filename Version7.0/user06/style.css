@@ -1,0 +1,108 @@
+.body-wideMargin {
+    margin: 50px;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: Roboto;
+}
+
+button {
+    padding: 5px;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+ol ol {
+    margin-left: 0.9em;
+}
+
+ol li {
+    line-height: 1.5;
+}
+
+li li {
+    list-style-type: lower-alpha;
+}
+
+li li li {
+    list-style-type: square;
+}
+
+li li li li {
+    list-style-type: circle;
+}
+
+h1 {
+    font-family: "", sans-serif;
+    font-size: 2em;
+    font-weight: 520;
+    margin-bottom: 1em;
+    margin: 15px;
+}
+
+h2 {
+    padding: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto" sans-serif;
+    transition: background 0.3s linear, color 0.3s linear;
+}
+
+body.dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 730px;
+    right: 10px;
+}
+
+label {
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s linear;
+}
+
+body.dark label {
+    background-color: #fff;
+}
+
+input {
+    visibility: hidden;
+}
+
+p {
+    padding: 10px
+}
+
+table {
+	text-align: left;
+	border-collapse: collapse;
+}
+
+tr {
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+.footer-copyright {
+    background-color: #009688;
+}
