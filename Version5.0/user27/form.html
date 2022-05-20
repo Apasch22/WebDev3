@@ -69,7 +69,9 @@
 (function() {
 
         $('h2').bind('Click', function() {
-console.log('clicked');
+    console.log('clicked');
+    var cloned = $(this).clone();
+    console.log(cloned);
         });
 
 })()
