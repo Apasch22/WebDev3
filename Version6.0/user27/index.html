@@ -1,136 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--Version 6.0 
-    Name:  
-    Date Completed: 
--->
-
+<!doctype html>
+<html>
 <head>
-    <title>JavaScript Examples</title>
+	<meta charset=utf-8>
+	<title>Slides and Structure</title>
+	<style>
 
-    <!-- Bootstrap meta data -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev JavaScript sample">
+	body {
+		width: 600px;
+		margin: auto;
+		font-family: sans-serif;
+	}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"><!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"><!-- Animate -->
-    <link rel="stylesheet" href="style.css">
+	#contact { 
+		background: #e3e3e3; 
+		padding: 1em 2em; 
+		position: relative;
+	}
 
-    <!-- JavaScript -->
-    <!-- These are needed to get the responsive menu to work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	.js #contact {
+		position: absolute;
+		top: 0;
+		width: inherit;
+		display: none;
+	}	
 
-    <style>
-        
-    </style>
+	#contact h2 { margin-top: 0; }
+
+	#contact ul { padding: 0; }
+
+	#contact li { 
+		list-style: none;
+		margin-bottom: 1em;
+	}
+
+	/* Close button on form */
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-weight: bold;
+		font-family: sans-serif;
+		cursor: pointer;
+	}	
+
+	/* Form inputs */
+	input, textarea { width: 100%; line-height: 2em;}
+	input[type=submit] { width: auto;  }
+	label { display: block; text-align: left; }
+
+	</style>
 </head>
+<body>
 
-<body class="body-wideMargin">
-    <h1 onMouseover="alert('GO Sabers!');" value="Click Me!">Shakopee High School</h1>
-    
-    <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6-md">
-                    <h1>Heading for a long list</h1>
-                    <ol>
-                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.
-                                    <ol>
-                                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            <ol>
-                                                <li>Lorem ipsum dolor sit amet, consectetuer.</li>
-                                            </ol>
-                                        </li>
-                                        <li>Aliquam tincidunt mauris eu risus.</li>
-                                        <li>Vestibulum auctor dapibus neque.</li>
-                                    </ol>
-                                </li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-                        </li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.</li>
-                    </ol>
-                    <button class="btn btn-danger btn-lg" onclick="firstSelector()">Try it</button>
 
-                    <button class="btn btn-info btn-lg" onclick="secondSelector()">Try it</button>
+<article>
+	<h1>My Awesome Post</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+</article>
 
-                    <button class="btn btn-dark btn-lg" onclick="thirdSelector()">Try it</button>
-                </div>
-                <div class="col-3-md">
+<div id="contact">
+	<h2>Contact Me</h2>
+	<form action="#">
+		<ul>
+			<li>
+				<label for="name">Name: </label>
+	 			<input name="name" id="name">
+			</li>
 
-                </div>
+			<li>
+				<label for="email">Email Address: </label>
+		 		<input name="email" id="email">
+			</li>
 
-                <div class="col-3-md">
-                    <h1>My shopping list</h1>
+			<li>
+				<label for="comments">What's Up?</label>
+				<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+			</li>
+			<li>
+				<input type="submit" value="Submit">
+			</li>
+		</ul>
+	</form>
+</div>
 
-                    <div>
-                        <label for="item">Enter a new item:</label>
-                        <input type="text" name="item" id="item">
-                        <button>Add item</button>
-                    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-                    <ul>
 
-                    </ul>
-                </div>
+<script>
 
-            </div>
+(function() {
+	
+$('html').addClass('js');
 
-            <script id="lists">
-                function firstSelector() {
-                    document.querySelector("li").style.backgroundColor = "red";
-                }
-                function secondSelector() {
-                    var x = document.querySelectorAll("li");
-                    var i;
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.backgroundColor = "#004500";
-                    }
-                }
-                function thirdSelector() {
-                    document.querySelector("ol ol li").style.backgroundColor = "#a2a2a2";
-                }
-            </script>
-            <script id="shopping">
-                const list = document.querySelector('ul');
-                const input = document.querySelector('input');
-                const button = document.querySelector('button');
+var contactForm = {
 
-                button.onclick = function () {
-                    let myItem = input.value;
-                    input.value = '';
+	container: $('#contact'),
 
-                    const listItem = document.createElement('li');
-                    const listText = document.createElement('span');
-                    const listBtn = document.createElement('button');
+	config: {
+		effect: 'slideToggle',
+		speed: 500
+	},
 
-                    listItem.appendChild(listText);
-                    listText.textContent = myItem;
-                    listItem.appendChild(listBtn);
-                    listBtn.textContent = 'Delete';
-                    list.appendChild(listItem);
+	init: function(config) {
+		$.extend(this.config, config);
 
-                    listBtn.onclick = function (e) {
-                        list.removeChild(listItem);
-                    }
+		$('<button></button>', {
+			text: 'Contact Me'
+		})
+			.insertAfter( 'article:first' )
+			.on( 'click', this.show );
+	},
 
-                    input.focus();
-                }
-            </script>
-    </main>
+	show: function() {
+		var cf = contactForm,
+			container = cf.container,
+			config = cf.config;
+
+		if ( container.is(':hidden') ) {
+			contactForm.close.call(container);
+			container[config.effect](config.speed);
+		}
+	},
+
+	close: function() {
+		var $this = $(this), // #contact
+			config = contactForm.config;
+
+		if ( $this.find('span.close').length ) return;
+
+		$('<span class=close>X</span>')
+			.prependTo(this)
+			.on('click', function() {
+				// this = span
+				$this[config.effect](config.speed);
+			})
+	}
+};
+
+
+contactForm.init({
+	// effect: 'fadeToggle',
+	speed: 300
+});
+
+})();
+
+</script>
+
 </body>
-
 </html>
