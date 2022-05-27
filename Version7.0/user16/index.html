@@ -1,3 +1,29 @@
+<?php
+$apiKey = "9dbc162b926f68ce060525b3d21ef54a"; //You will need to add in the 
+$cityId = "5046997"; //5046997 Shakopee City Id
+$units = "metric"; //metric-Celcius  imperial-Farhenheit
+if ($units == 'metric') { //Changes the $temp varaible to match 
+    $temp = "C";
+} else {
+    $temp = "F";
+}
+$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=" . $units . "&APPID=" . $apiKey;
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_VERBOSE, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$response = curl_exec($ch);
+
+curl_close($ch);
+$data = json_decode($response);
+$currentTime = time();
+?>
+
 <html lang="en">
 <!--Version 4.0 
 	Name:
@@ -23,7 +49,7 @@
 <head>
 
     <title>Superheroes and Villians</title>
-    <link rel="shortcut icon" type="image/x-icon" href="TheflashFAV.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="TheflashFAV.png" />
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -52,7 +78,7 @@
         menu {
             margin: 0;
             padding: 0;
-        
+
         }
 
         .wideMargin {
@@ -65,20 +91,51 @@
             font-size: 12px;
             text-align: center;
         }
+
         .page-footer {
             background-color: gold;
         }
-        
+
         .title-large {
             background-color: gold;
         }
+
         .text-left {
             background-color: gold;
         }
+
         .topnav a:hover {
             border-bottom: 5px solid red;
         }
 
+        .report-container {
+            border: #E0E0E0 1px solid;
+            padding: 20px 40px 40px 40px;
+            border-radius: 2px;
+            width: 550px;
+            margin: 0 auto;
+        }
+
+        .weather-icon {
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .weather-forecast {
+            color: #212121;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0px;
+        }
+
+        span.min-temperature {
+            margin-left: 15px;
+            color: #929292;
+        }
+
+        .time {
+            line-height: 25px;
+        }
     </style>
 </head>
 
@@ -90,7 +147,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto topnav">
                     <li class="nav-item active">
@@ -106,8 +163,7 @@
                         <a class="nav-link active" href="Honorable Mentions.html">Honerable Mentions</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Resources
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -123,42 +179,61 @@
     <!---------------------------------- End the nav-bar ------------------------------------->
 
     <main class="wideMargin">
-       
+
         <h1 class="text-left my-3 title" tabindex="0">Chanmackara Proeun Webpage</h1>
-        
+
         <!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <h3 class="title title-large"id="topHeading">Marvel and DC</h3>
-        
+        <h3 class="title title-large" id="topHeading">Marvel and DC</h3>
+
         <div style="padding-top: 5px;">
             <!-- spacing div-->
 
-            
+
             <span class="title title-large">DC</span>
-          
+
             <div class="content">
-                <img src="DC.jpeg" class="left"
-                alt="DC Picture width=" 200" height="200"></td>
+                <img src="DC.jpeg" class="left" alt="DC Picture width=" 200" height="200"></td>
             </div>
-            
+
             <span class="title title-large">MARVEL</span>
 
             <div class="content">
-                <img src="Marvel.jpeg" class="left"
-                alt="Marvel Picture width=" 200" height="200"></td>
+                <img src="Marvel.jpeg" class="left" alt="Marvel Picture width=" 200" height="200"></td>
             </div>
 
             <span class="title title-large">DC VS MARVEL</span>
 
             <div class="content">
-                <img src="MarvelVDC.jpeg" class="left"
-                alt="Marvel VS DC Picture width=" 200" height="200"></td>
+                <img src="MarvelVDC.jpeg" class="left" alt="Marvel VS DC Picture width=" 200" height="200"></td>
             </div>
 
-           
+
+
+            <marquee>Which is better Marvel or Dc?</marquee>
+            <span style="background-color: gold">Highlighted text</span>
+
             
-           
+            <div class="report-container">
+                <h2><?php echo $data->name; ?> Weather Status</h2>
+                <div class="time">
+                    <div><?php echo date("l g:i a", $currentTime); ?></div>
+                    <div><?php echo date("jS F, Y", $currentTime); ?></div>
+                    <div><?php echo ucwords($data->weather[0]->description); ?></div>
+                </div>
+                <div class="weather-forecast">
+                    <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png" class="weather-icon" /> <?php echo $data->main->temp_max; ?>&deg;<?php echo $temp; ?><span class="min-temperature"><?php echo $data->main->temp_min; ?>&deg;<?php echo $temp; ?></span>
+                </div>
+                <div class="time">
+                    <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
+                    <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
+                </div>
+            </div>
+            
+
+
+
 
             <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
     </main>
@@ -168,51 +243,49 @@
 
         <!-- Footer Elements -->
         <div class="container">
-      
-          <!--Grid row-->
-          <div class="row">
-      
-            <!--Grid column-->
-            <div class="col-md-6 mb-4">
-      
-              <!-- Form -->
-              <form class="form-inline">
-                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                  aria-label="Search">
-                
-              </form>
-              <!-- Form -->
-      
-            </div>
-            <!--Grid column-->
-      
-            <!--Grid column-->
-            <div class="col-md-6 mb-4">
-      
-              <form class="input-group">
-                <input type="text" class="form-control form-control-sm" placeholder="Your email"
-                  aria-label="Your email" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+
+                    <!-- Form -->
+                    <form class="form-inline">
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+
+                    </form>
+                    <!-- Form -->
+
                 </div>
-              </form>
-      
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+
+                    <form class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Your email" aria-label="Your email" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
+                        </div>
+                    </form>
+
+                </div>
+                <!--Grid column-->
+
             </div>
-            <!--Grid column-->
-      
-          </div>
-          <!--Grid row-->
-      
+            <!--Grid row-->
+
         </div>
         <!-- Footer Elements -->
-      
+
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
-          <a href="/"> Chanmackara Proeun</a>
+            <a href="/"> Chanmackara Proeun</a>
         </div>
         <!-- Copyright -->
-      
-      </footer>
+
+    </footer>
     <!---------------------------------- End the footer ------------->
 </body>
 
