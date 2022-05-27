@@ -122,7 +122,7 @@
 
             <body>
                 <center>
-                    <h1>Love Tester</h1>
+                    <h1>Love Tester aka element 1</h1>
                     <SCRIPT LANGUAGE="JavaScript">
                         !--Begin
                         function calc() {
@@ -215,7 +215,7 @@
 
                 <body onload="on()" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
                     <center>
-                        <h2>Type anything slowly</h2>
+                        <h2>Type anything slowly aka element 2</h2>
                         <form name="f">
                             <textarea name="txt" cols="20" rows="5"></textarea>
                         </form>
@@ -229,7 +229,7 @@
 
                 <body>
                     <center>
-                        <div class=title>Calculator for bucketheads.</div>
+                        <div class=title>Calculator for bucketheads. aka element 3</div>
                         <table border="2">
                             <tr>
                                 <td><input type="button" value="c" onclick="clr()" /> </td>
@@ -278,24 +278,29 @@
                 </body>
 
         </div>
-        <button id="btn">Change Me</button>
-        <script language="javascript">
+         <button>Change Me</button>
+         <script language="javascript">
             function randomBg() {
-                const btn = document.getElementById("btn");
+                const btn = document.getElementById("button");
 
                 btn.addEventListener("click", () => {
                     document.body.style.background = randomBg();
                 });
                 return `hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`;
             }
-
+            
         </script>
-        <button>button</button>
-    </div>
-
-
-    </div>
-
+        <body> 
+            <h1 onmouseover="style.color='red'" onmouseout="style.color='orange'">Element 2. Change this texts color!</h1>
+        
+        </body>
+        <script>
+          function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+          }
+          </script>
+          </body>
+          <button>button</button>
 
     </div>
 

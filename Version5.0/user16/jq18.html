@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>mustashe</title>
+    <style>
+        h2 span { color: gray; font-size: .8em; }
+    </style>
+</head>
+
+<body>
+
+    <ul class="tweets">
+        <script id="template" type="text/x-handlebars-template">
+                {{#each this}}
+                <li>
+                     <h2>{{fullName author}}</h2>
+                    <p>{{{tweet}}}</p>
+
+                    {{#if quote}}
+                        <h5>{{quote}}</h5>
+                    {{else}}
+                        <h5>Author does not have a quote.</h5>
+                    {{/unless}}
+
+                </li>
+                {{/each}}
+         </script>
+    </ul>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script src="https://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>
+
+    <script>
+
+        (function () {
+
+            var data = [
+                {
+                    author: { first: 'Marc', last: 'Spector' },
+                    tweet: 'Moonknight is coming!',
+                    age: 29,
+                    quote: 'He is coming'
+                },
+                {
+                    author: { first: 'Steven', last: 'Grant' },
+                    tweet: 'Moonknight is coming!',
+                    age: 29
+                },
+                {
+                    author: { first: 'Marc', last: 'Spector' },
+                    tweet: 'Moonknight is coming!',
+                    age: 29,
+                    quote: 'Khonshu - God of the moon'
+                },
+                {
+                    author: { first: 'Jake', last: 'Lockley' },
+                    tweet: 'Moonknight is coming!',
+                    age: 29,
+                    quote: 'Death will rise'
+                },
+                {
+                    author: { first: 'Khonshu', last: 'Moon' },
+                    tweet: 'Moonknight is coming!',
+                    age: 29,
+                    quote: 'He is coming'
+                },
+            ];
+
+            handlebars.registerHelper('fullName', function( author ) {
+                return author.first + ' ' + author.last;
+            })
+
+            handlebars.compile($('#template').html());
+
+            $('ul.tweets').append(template(data));
+
+
+        })();
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
