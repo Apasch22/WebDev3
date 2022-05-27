@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Custom Effect Methods</title>
+	<style>
+	p { margin-top: 0;}
+	</style>
+</head>
+<body>
+
+<h1>open! click me..</h1>
+
+<div class=content>
+	<p>
+<h2>hot dogs are not sandwiches by the way</h2>
+	</p>	
+</div>
+
+<h1>wheres dababy?</h1>
+
+<div class=content>
+    <h4>oh theres dababy</h4>
+    <span class=co><img src="dababy.jpeg" alt="image"></span>
+</div>
+<h2>you say hotdogs are sandwiches?</h2>
+<div class=content>
+    <h4>does this look like a sandwich to you?</h4>
+    <span class=co><img src="hotdogs-te-square-200702.jpeg" alt="image" style="width: 300px; height: 300px"></span>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script>
+
+(function() {
+	var content = $('div.content').hide();
+
+	jQuery.fn.flash = function( speed, easing, callback ) {
+		var $this = $(this);
+
+		return $this.slideDown(500, function() {
+	 		$this.delay(2000).slideUp(500);
+		});
+	};
+
+	$('h1').on('click', function() {
+		content.flash();
+	});	
+})();
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
