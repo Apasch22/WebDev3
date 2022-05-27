@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mustache</title>
+    
+</head>
+<body>
+    
+<ul class="tweets">
+    <script id="template" type="text/x-handlebars-template">
+        <li>
+            <h2>{{author}}</h2>
+            <p>{{tweet}}</p>
+        </li>
+    </script>
+</ul>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>
+
+<script>
+    
+(functions() {
+    
+var data = {
+    author: 'Jeffre Way',
+    tweet: '30 Days to Learn jQuery Rocks'
+    };
+
+var template = Handlebars.compile( $('#template').html() );
+
+template(data);
+
+})();
+    
+    </script>
+    
+
+</body>
+</html>
