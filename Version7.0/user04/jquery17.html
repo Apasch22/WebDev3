@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>jquery17</title>
+</head>
+<body>
+
+<ul class="tweets">
+<script id="template" type="text/x-handlebars-template">
+    <li> 
+        <h2>{{author}}</h2>
+        <p>{{tweet}}</p>
+    </li>
+</script>
+</ul>
+
+
+<script id=blogTemplate type=tuts/template>
+    <h2> {{title}} </h2>
+    <img src={{thumbnail}} alt={{title}}>
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+
+(function() {
+    var content = [
+        {
+            title: 'My awesome blog post',
+            thumbnail: './images/favicon.ico'
+        },
+        {
+            title: 'My other awesome blog post',
+            thumbnail: './images/laxsaber.ico'
+        },
+        {
+            title: 'My other other awesome blog post',
+            thumbnail: './images/otherbackgroundreds.jpg'
+        }
+    ],
+        template = $.trim( $('#blogTemplate').html() ),
+        frag = '';
+
+
+
+        $.each( content, function( index, obj ) {
+            frag += 
+                template.replace( /{{title}}/ig, obj.title )
+                        .replace( /{{thumbnail}}/ig, obj.thumbnail );
+        });
+
+        $('body').append(frag);
+
+})();
+
+
+//**jquery 18 now**//
+(function() {
+
+    var data = {
+        author: 'Jeffery Way',
+        tweet: '30 Days to Learn jQuery Rocks'
+    };
+
+    var template = Handlebars.compile( $('#template').html() );
+
+    $('ul.tweets').append( template(data) );
+
+})();
+
+</script>
+</body>
+</html>

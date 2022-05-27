@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>jquery10</title>
+    <style>
+body {
+    margin: auto;
+    width: 600px;
+}
+
+    </style>
+  </head>
+  
+  <body>
+
+      <h1>Reveal some of the digits of pi</h1>
+      <div class="content">
+<p>
+    3.14159265358979323846264
+    3383279502884197169399375
+    1058209749445923078164062
+    8620899862803482534211706
+    7982148086513282306647093
+    8446095505822317253594081
+    2848111745028410270193852
+    1105559644622948954930381
+    9644288109756659334461284
+    7564823378678316527120190
+    9145648566923460348610454
+    3266482133936072602491412
+    7372458700660631558817488
+    152092096282925409171536
+</p></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script>
+
+$('div.content').hide();
+
+$.fx.speeds.tots = 15000;
+
+$('h1').on('click', function() {
+    $(this).next().slideDown('tots');
+})
+
+</script>
+
+
+
+</body>
+</html>
