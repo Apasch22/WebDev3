@@ -17,7 +17,8 @@ function bigImg(x) {
     x.style.height = "50%";
     x.style.width = "50%";
  }
- var countDownDate = new Date("Jun 3, 2022 12:00:00").getTime();
+
+var countDownDate = new Date("Jun 3, 2022 12:00:00").getTime();
 
 var x = setInterval(function() {
 
