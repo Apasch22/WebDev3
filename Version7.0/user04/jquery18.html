@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>jquery18</title>
+</head>
+<body>
+
+<ul class="tweets">
+<script id="template" type="text/x-handlebars-template">
+    {{#each this}}
+    <li> 
+        <h2>{{fullName author}}</h2>
+        <p>{{tweet}}</p>
+
+        {{#if quote}}
+        <h5>{{quote}}</h5>
+        {{else}}
+        <h5>Author does not have a quote</h5>
+        {{/if}}
+    </li>
+    {{/each}}
+</script>
+</ul>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="handlebars-v4.7.7.js"></script>
+
+<script>
+
+(function() {
+
+    var context = [
+        {
+        author:{ first: 'Jeffery', last: 'Way', age: 27 },
+        tweet: '30 Days to Learn jQuery Rocks',
+        quote: 'Never ever, ever, ever give up.'
+        },
+        {
+        author: { first: 'John', last: 'Doe', age: 27 },
+        tweet: '<strong>30 Days</strong> to Learn jQuery Rocks',
+        },
+        {
+        author: { first: 'Jane', last: 'Doe', age: 28 },
+        tweet: '<strong>30 Days</strong> to Learn jQuery really Rocks',
+        }
+    ];
+
+    Handlebars.registerHelper('fullName', function( author ) {
+        return author.first + ' ' + author.last + ' - ' + author.age;
+        });
+
+    var template = Handlebars.compile( $('#template').html() );
+
+    $('ul.tweets').append( template(data) );
+
+})();
+
+</script>
+</body>
+</html>
