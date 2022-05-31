@@ -25,52 +25,22 @@ $data = json_decode($response);
 $currentTime = time();
 ?>
 
-<!doctype html>
-<html>
-<head>
-<title>Forecast Weather using OpenWeatherMap with PHP</title>
-
-<style>
-body {
-    font-family: Arial;
-    font-size: 0.95em;
-    color: #929292;
-}
-
-.report-container {
-    border: #E0E0E0 1px solid;
-    padding: 20px 40px 40px 40px;
-    border-radius: 2px;
-    width: 550px;
-    margin: 0 auto;
-}
-
-.weather-icon {
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
-.weather-forecast {
-    color: #212121;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 20px 0px;
-}
-
-span.min-temperature {
-    margin-left: 15px;
-    color: #929292;
-}
-
-.time {
-    line-height: 25px;
-}
-</style>
-
-</head>
-<body>
-
-    <div class="report-container">
+<html lang="en">
+    <!--Version 8.0 
+	Name:
+	Date Completed:
+    -->
+    <head>
+        
+        <title>Web Development User #07</title>
+    
+    </head>
+    
+    <body>
+       <div> 
+        <center>My name is User #07</center>
+</div>
+        <div class="report-container">
         <h2><?php echo $data->name; ?> Weather Status</h2>
         <div class="time">
             <div><?php echo date("l g:i a", $currentTime); ?></div>
@@ -89,6 +59,6 @@ span.min-temperature {
         </div>
     </div>
 
+    </body>
 
-</body>
 </html>
