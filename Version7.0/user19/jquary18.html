@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Mustache</title>
-    
+<style>
+h2 span { color: gray; font-size: .8em; }
+</style>
 </head>
 <body>
     
 <ul class="tweets">
     <script id="template" type="text/x-handlebars-template">
+        {{#each this}}
         <li>
-            <h2>{{author}}</h2>
-            <p>{{tweet}}</p>
+            <h2>{{fullName author}}</h2>
+            <p>{{{tweet}}}</p>
+
+            {{#if quote}}
+                <h5>{{quote}}}}</h5>
+            {{else}}        
+                <h5>Author does not have a quote.</h5>
+            {{/if}}
         </li>
+        {{/each}}
     </script>
 </ul>
 
@@ -23,16 +33,31 @@
 
 <script>
     
-(functions() {
-    
-var data = {
-    author: 'Jeffre Way',
-    tweet: '30 Days to Learn jQuery Rocks'
-    };
+(function() {
+    var context = [
+        {
+            author: { first: 'Jeffrey', last: 'Way', age: 27 },
+            tweet: '30 Days to Learn jQuery Rocks',
+            quote: 'Never ever, ever, ever give up.'
+        },
+        {
+            author: { first: 'Jeffrey', last: 'Way', age: 45 },
+            tweet: '<strong>30 Days</strong> to Learn jQuery Rocks',
+        },
+        {
+            author: { first: 'Steven', last: 'Youngnberg', age: 72 },
+            tweet: 'Steven, Crosby, Hockey God, Unreal at chel.',
+        }
+    ];
 
-var template = Handlebars.compile( $('#template').html() );
+    Handlebars.registerHelper('fullName', function( author ) {
+        return author.first + '' + author.last + ' - ' + author.age;
+    });
 
-template(data);
+    var template = Handlebars.compile( $('#template').html() );
+
+    $('ul.tweets').append( template(context) );
+
 
 })();
     
