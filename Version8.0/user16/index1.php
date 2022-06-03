@@ -1,14 +1,43 @@
+<?php
+$apiKey = "9dbc162b926f68ce060525b3d21ef54a"; //You will need to add in the 
+$cityId = "5046997"; //5046997 Shakopee City Id
+$units = "imperial"; //metric-Celcius  imperial-Farhenheit
+if ($units == 'metric') { //Changes the $temp varaible to match 
+    $temp = "C";
+} else {
+    $temp = "F";
+}
+$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=" . $units . "&APPID=" . $apiKey;
 
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_VERBOSE, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$response = curl_exec($ch);
+
+curl_close($ch);
+$data = json_decode($response);
+$currentTime = time();
+?>
 
 <html lang="en">
 <!--Version 4.0 
-	Name:
-	Date Completed:
-    -->
+        Name:
+        Date Completed:
+        -->
 
 <head>
 
-    <head> <script language="javascript" type="text/javascript">alert("Superheroes vs Villians")</script></head><font face="TimesNewRoman"><span style="font-size: 10pt; text-decoration: none"></span></a></font>
+    <head>
+        <script language="javascript" type="text/javascript">
+            alert("Superheroes vs Villians")
+        </script>
+    </head>
+    <font face="TimesNewRoman"><span style="font-size: 10pt; text-decoration: none"></span></a></font>
 
 </head>
 
@@ -18,9 +47,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Version 4.0
-        Name:
-        Date Completed:
-    -->
+            Name:
+            Date Completed:
+        -->
 
 <head>
 
@@ -190,39 +219,55 @@
             <marquee>Which is better Marvel or Dc?</marquee>
             <span style="background-color: gold">Highlighted text</span>
 
-            <marquee behavior=alternate width="202″ scrollamount="8″ scrolldelay="95″ height="37″ backgroundcolor="#00FFFF">Bouncy text</marquee>
+            <marquee behavior=alternate width="202″ scrollamount=" 8″ scrolldelay="95″ height=" 37″ backgroundcolor="#00FFFF">Bouncy text</marquee>
 
-            <select> 
+            <select>
 
                 <option value="">Select an option</option>
-                <optgroup label="Action">   
-                  <option value="">Avengers</option>
-                  <option value="">Die Hard</option>
-                  <option value="">Fast &amp; Furious</option>
-                  <option value="">The Dark Knight</option>
-                  <option value="">The Karate Kid</option>
+                <optgroup label="Action">
+                    <option value="">Avengers</option>
+                    <option value="">Die Hard</option>
+                    <option value="">Fast &amp; Furious</option>
+                    <option value="">The Dark Knight</option>
+                    <option value="">The Karate Kid</option>
                 </optgroup>
                 <optgroup label="Animation">
-                  <option value="">Despicable Me</option>   
-                  <option value="">Ice Age</option>
-                  <option value="">Kung Fu Panda</option>
-                  <option value="">Madagascar</option>
-                  <option value="">The Lion King</option>
+                    <option value="">Despicable Me</option>
+                    <option value="">Ice Age</option>
+                    <option value="">Kung Fu Panda</option>
+                    <option value="">Madagascar</option>
+                    <option value="">The Lion King</option>
                 </optgroup>
                 <optgroup label="Horror">
-                  <option value="">Mirrors</option>
-                  <option value="">Scream</option>    
-                  <option value="">The Final Destination</option>
-                  <option value="">The Grudge</option>
-                  <option value="">The Ring</option>
+                    <option value="">Mirrors</option>
+                    <option value="">Scream</option>
+                    <option value="">The Final Destination</option>
+                    <option value="">The Grudge</option>
+                    <option value="">The Ring</option>
                 </optgroup>
-                  
-                </select>
+
+            </select>
+
+            <div class="report-container">
+                <h2><?php echo $data->name; ?> Weather Status</h2>
+                <div class="time">
+                    <div><?php echo date("l g:i a", $currentTime); ?></div>
+                    <div><?php echo date("jS F, Y", $currentTime); ?></div>
+                    <div><?php echo ucwords($data->weather[0]->description); ?></div>
+                </div>
+                <div class="weather-forecast">
+                    <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png" class="weather-icon" /> <?php echo $data->main->temp_max; ?>&deg;<?php echo $temp; ?><span class="min-temperature"><?php echo $data->main->temp_min; ?>&deg;<?php echo $temp; ?></span>
+                </div>
+                <div class="time">
+                    <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
+                    <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
+                </div>
+            </div>
 
 
 
-            
-            
+
+
 
 
 
