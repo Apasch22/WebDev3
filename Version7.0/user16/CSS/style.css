@@ -95,3 +95,38 @@ button:active {
     transform: translate(2px, 2px);
 }
 
+
+
+
+
+
+select,
+optgroup {
+  font-family: "bookman old style";
+  font-size: 12pt;
+}
+
+optgroup[label="Action"] {
+  background: beige;
+}
+
+optgroup[label="Action"]::before {
+  background: yellow;
+}
+
+optgroup[label="Animation"] {
+  background: aliceblue;
+}
+
+optgroup[label="Animation"]::before {
+  background: lightskyblue;
+}
+
+optgroup[label="Horror"] {
+  background: mistyrose
+}
+
+optgroup[label="Horror"]::before {
+  background: red;
+}
+
