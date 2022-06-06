@@ -1,0 +1,35 @@
+.background-red {
+    background-color: red;
+    
+}
+td:hover {
+    background-color: rgb(119, 231, 173);
+}
+
+.background-orange {
+    background-color: orange;
+}
+
+.background-yellow {
+    background-color: yellow;
+}
+
+.background-green {
+    background-color: green;
+}
+
+.background-blue {
+    background-color: blue;
+}
+
+.background-indigo {
+    background-color: indigo;
+}
+
+.background-violet {
+    background-color: violet;
+}
+
+.background-red:hover {
+    background-color: black;
+}

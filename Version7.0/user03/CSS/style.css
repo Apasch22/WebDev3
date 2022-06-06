@@ -1,43 +1,95 @@
+@font-face {
+    font-family: "CoolFont";
+    src: url(Fonts/RifficFree-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "MemphisRiver";
+    src: url(fonts/MemphisRiver.ttf) format("truetype");
+}
+
+
+
 .body-wideMargin {
     margin: 50px;
     font-size: 100%;
     line-height: 1.5;
     font-family: Roboto;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 button {
     padding: 5px;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 ol {
     list-style-type: decimal-leading-zero;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 ol ol {
     margin-left: 0.9em;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 ol li {
     line-height: 1.5;
+    cursor:url("images/CURESURE2.png"), default;
 }
+
 
 li li {
     list-style-type: lower-alpha;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 li li li {
     list-style-type: square;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 li li li li {
     list-style-type: circle;
+    cursor:url("images/CURESURE2.png"), default;
 }
 
 h1 {
-    font-family: "Fjalla One", sans-serif;
+    font-family: 'CoolFont';
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 400;
     border-bottom: 1px solid black;
     margin-bottom: 1em;
+    cursor:url("images/CURESURE2.png"), default;
+}
+
+h2 {
+    font-family: "MemphisRiver", sans-serif;
+    font-size: 7em;
+    cursor:url("images/CURESURE2.png"), default;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    cursor:url("images/CURESURE2.png"), default;
+}
+
+.table {
+    margin-left: 50px;
+    margin-right: 50px;
+    cursor:url("images/CURESURE2.png"), default;
+}
+
+#active-page{
+    background-color: black;
+    cursor:url("images/CURESURE2.png"), default;
+}
+
+body{
+
+cursor:url("images/CURESURE2.png"), default;
 }
