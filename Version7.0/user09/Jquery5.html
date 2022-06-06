@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Custom Effect Methods</title>
+    <style>
+      p {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click Me</h1>
+
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        ornare in nunc sollicitudin hendrerit. Curabitur pretium justo tempus,
+        dapibus massa id, molestie nulla. Praesent dapibus dui quis leo posuere,
+        eget malesuada lacus ornare. Phasellus consectetur tellus vel ante
+        elementum posuere. Sed ultricies nibh eget tempor semper. Etiam ut metus
+        ligula. Aenean pharetra velit at nisi faucibus efficitur. Ut condimentum
+        odio purus, nec tincidunt ante rutrum sed. Ut elit erat, lobortis sit
+        amet dolor in, vestibulum mollis turpis. Interdum et malesuada fames ac
+        ante ipsum primis in faucibus. Integer eu quam eu mi faucibus commodo.
+        Fusce finibus ex molestie tellus blandit, vel tincidunt nulla laoreet.
+        Nam fermentum mauris eget ultrices pharetra.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        ornare in nunc sollicitudin hendrerit. Curabitur pretium justo tempus,
+        dapibus massa id, molestie nulla. Praesent dapibus dui quis leo posuere,
+        eget malesuada lacus ornare. Phasellus consectetur tellus vel ante
+        elementum posuere. Sed ultricies nibh eget tempor semper. Etiam ut metus
+        ligula. Aenean pharetra velit at nisi faucibus efficitur. Ut condimentum
+        odio purus, nec tincidunt ante rutrum sed. Ut elit erat, lobortis sit
+        amet dolor in, vestibulum mollis turpis. Interdum et malesuada fames ac
+        ante ipsum primis in faucibus. Integer eu quam eu mi faucibus commodo.
+        Fusce finibus ex molestie tellus blandit, vel tincidunt nulla laoreet.
+        Nam fermentum mauris eget ultrices pharetra.
+      </p>
+    </div>
+    <div class="img2">
+      <img
+        style="width: 150px; height: 150px"
+        src="https://www.cambridge.org/elt/blog/wp-content/uploads/2019/07/Sad-Face-Emoji-480x480.png.webp"
+      />
+    </div>
+    <div class="img1">
+      <img
+        style="width: 150px; height: 150px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/2000px-Mr._Smiley_Face.svg.png"
+      />
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+      (function () {
+        var content = $("div.content").hide();
+        jQuery.fn.flash = function (speed, easing, callback) {
+          var $this = $(this);
+
+          return $this.slideDown(500, function () {
+            $this.delay(2000).slideUp(500);
+          });
+        };
+        $("h1").on("click", function () {
+          content.flash();
+        });
+      })();
+      $(document).ready(function () {
+        $("h1").click(function () {
+          $("div.img1").fadeOut();
+        });
+      });
+      $(document).ready(function () {
+        $("h1").click(function () {
+          $("div.img2").slideUp();
+        });
+      });
+    </script>
+  </body>
+</html>

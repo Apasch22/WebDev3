@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Titled Something</title>
+	<style>
+	p { margin-top: 0;}
+	</style>
+</head>
+<body>
+
+<h1>Brody Button</h1>
+
+<div class=content>
+	<p>
+	BRODY
+	</p>
+	<p>
+	BRODY
+	</p>	
+</div> 
+
+<h1>Modey</h1>
+
+<div class=content>
+	<p>
+	Crody
+	</p>
+	<p>
+	Prody
+	</p>	
+</div>
+
+<h1> <img src="Leg1.png" alt="leg" width="100" height="100"> </h1>
+
+<div class=content>
+	</p> <img src="Leg2.png" alt="Leg2" width="100" height="100">
+	</p>
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script>
+
+(function() {
+	var content = $('div.content').hide();
+
+	jQuery.fn.flash = function( speed, easing, callback ) {
+		var $this = $(this);
+
+		return $this.slideDown(500, function() {
+	 		$this.delay(500).slideUp(1200);
+		});
+	};
+
+	$('h1').on('click', function() {
+		content.flash();
+	});	
+})();
+
+
+
+
+</script>
+
+</body>
+</html>

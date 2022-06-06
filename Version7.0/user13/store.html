@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 7.0 
+    Name:  
+    Date Completed: 
+-->
+
+<head>
+    <!-- Bootstrap meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Introduction to JavaScript">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript -->
+    <script src="JS/sampleJS.js"></script>
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Internal Styling Here */
+        img {
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--NavBar-->
+    <div class="menu">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand">KK Gaming Cafe</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="games.html" class="nav-item nav-link">Games</a>
+                    <a href="store.html" class="nav-item nav-link active" tabindex="-1">Store</a>
+                    <a href="reviews.html" class="nav-item nav-link" tabindex="-1">Reviews</a>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main class="wideMargin">
+        <h1 class="text-left my-3 solid" tabindex="0">Store Hours</h1>
+        <center>
+            <button id="DATE" onclick="time()">My Date and Time</button>
+        </center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Monday</td>
+                <td>2pm - 11pm</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>2pm - 11pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>2pm - 11pm</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>2pm - 11pm</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>12pm - 12am</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>12pm - 12am</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>12pm - 12am</td>
+            </tr>
+        </table>
+        <h1 class="text-left my-3 solid" tabindex="0">Menu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>APPETIZERS</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>A1)</td>
+                <td>Calamari</td>
+                <td>$13</td>
+                <td><img src = "https://howtofeedaloon.com/wp-content/uploads/2015/04/calamari-IG.jpg"></td>
+            </tr>
+            <tr>
+                <td>A2)</td>
+                <td>Edamame</td>
+                <td>$5</td>
+                <td><img src = "https://www.thespruceeats.com/thmb/8_hpm47p1TeDICKzjn-1pcGi4zE=/1869x1310/filters:fill(auto,1)/1-mixa-edamame-56a9bf613df78cf772aa2ced.jpg"></td>
+            </tr>
+            <tr>
+                <td>A3)</td>
+                <td>4 Eggrolls</td>
+                <td>$5</td>
+                <td><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKIRESom-fnEDRmO9NPWsaPaWWlNdLK9e9mSujgCTExpZ32eEsuxlVEwNsJ6a1DMesTz0:https://www.homemadeitaliancooking.com/wp-content/uploads/2018/04/4_eggrolls_and_sauce.jpg&usqp=CAU"></td>
+            </tr>
+        </table>
+        <table>
+            <th>ENTREES</th>
+            <tr>
+                <td>E1)</td>
+                <td>Ramen</td>
+                <td>$12</td>
+                <td><img src = "https://hips.hearstapps.com/hmg-prod/images/190208-delish-ramen-horizontal-093-1550096715.jpg"></td>
+            </tr>
+            <tr>
+                <td>E2)</td>
+                <td>Sushi</td>
+                <td>$15</td>
+                <td><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAv266_IVHvyM6sypDZxyy8Vv7bdtMk-n_BHVVCvaleckY-AM8LBDwBr_JhULt03KxwrE:https://bloximages.newyork1.vip.townnews.com/swnewsmedia.com/content/tncms/assets/v3/editorial/f/2b/f2ba1af4-c804-11e8-afb3-b702e2dd1b27/5bb65ea1ddf11.image.png%3Fresize%3D895%252C500&usqp=CAU"></td>
+            </tr>
+            <tr>
+                <td>E3)</td>
+                <td>Orange Chicken</td>
+                <td>$9</td>
+                <td><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9b3bx14UAlZ-_lg2VEV3-TzENCV4Xr2F_849OySYaCSuZ0EuZxBcIy2HWGQDypn_pLCo:https://www.modernhoney.com/wp-content/uploads/2018/01/Chinese-Orange-Chicken-2.jpg&usqp=CAU"></td>
+            </tr>
+        </table>
+    </main>

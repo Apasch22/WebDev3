@@ -25,6 +25,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
+    hidden {
+        display: none;
+    }
+    
+    a.skip-main {
+        left: -999px;
+        position: absolute;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -999;
+    }
+    
+    a.skip-main:focus,a.skip-main:active {
+        color: #fff;
+        background-color: #000;
+        left: auto;
+        top: auto;
+        width: 30%;
+        height: auto;
+        overflow: auto;
+        margin: 10px 35%;
+        padding: 5px;
+        border-radius: 15px;
+        border: 4px solid red;
+        text-align: center;
+        font-size: 1.2em;
+        z-index: 999;
+    }
+    
     <style type="text/css">
         .menu {
             margin: 0px;
@@ -42,6 +73,8 @@
 </head>
 
 <body>
+    <div id="main" class="hidden" tabindex="-1"></div>
+    <a class="skip-main" tabindex="0" href="#main">Skip to main content</a>
     <!---------------------------------- Begin the nav-bar ----------------------------------->
     <div class="menu">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -55,7 +88,7 @@
                     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="#" class="nav-item nav-link">About Me</a>
-                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Music</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="0">Music</a>
                     <a href="#" class="nav-item nav-link disabled" tabindex="-1">Lists</a>
                     <a href="games.html" class="nav-item nav-link" tabindex="-1">Games</a>
                     <a href="bootstrap.html" class="nav-item nav-link" tabindex="-1">Bootstrap</a>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<hlml>
+<head>
+    <meta charset=utf-8>
+    <title>Bind...Live...Delegate...On...Dang That's Confusing</title>
+</head>
+<body>
+
+<div class="container">
+    <h2><td><img src="images/jordanroller.jpg" style="width:200px;height:400/px;"></td></h2>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+<script>
+
+(function() {
+    $('div.container').delegate('h2', 'click', function() {
+        console.log('clicked');
+        $(this).clone().appendTo('.container');
+    });
+
+})();
+
+</script>
+
+</body>
+</hlml>

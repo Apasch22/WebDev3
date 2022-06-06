@@ -41,3 +41,61 @@ h1 {
     border-bottom: 1px solid black;
     margin-bottom: 1em;
 }
+.printer { margin-top: auto; 
+background-color: yellow;}
+
+.button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
+
+  .backgroundcolor {background-color: red;
+    color: yellow;}  
+
+    table {
+        font-family: "Marker Felt", "Comic Sans MS", fantasy;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        border-collapse: collapse;
+        word-spacing: 0px;
+    }
+    
+    tr {
+        border: 1px solid #ffffff;
+        text-align: center;
+        background-color:#6228c5; 
+    }
+    
+    th {
+        text-align: center;
+        color: #000000;
+        background-color: #cbd4de;
+    } 
+    .menu {
+        margin: 0px;
+        background-color: yellow;
+    }
+
+    .wideMargin {
+        margin: 15px;
+    }
+
+    footer {
+        font-size: 12px;
+        text-align: center;
+    }
+.candle {background-color: red;} 
+
+.extender {padding-bottom: 15cm;}
+
+.men {background-color: yellow;}
+    

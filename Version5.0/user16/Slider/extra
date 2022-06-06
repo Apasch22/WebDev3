@@ -1,0 +1,7 @@
+(test) ? true : false;
+        
+        if ( direction === 'next' ) {
+            current += 1; // 2
+        } else {
+            current -= 1; // 0
+        }

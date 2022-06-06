@@ -1,9 +1,9 @@
 <?php
-$apiKey = "API KEY"; //You will need to add in the 
+$apiKey = "674e9526418c388a57016bb86126a08b"; //You will need to add in the 
 $cityId = "5046997"; //5046997 Shakopee City Id
-$units = "metric";//metric-Celcius  imperial-Farhenheit
-if ($units == 'metric'){//Changes the $temp varaible to match 
-    $temp = "C";
+$units = "imperial";//imperial-Farhenheit
+if ($units == 'imperial'){//Changes the $temp varaible to match 
+    $temp = "F";
 }
 else {
     $temp = "F";
@@ -23,6 +23,13 @@ $response = curl_exec($ch);
 curl_close($ch);
 $data = json_decode($response);
 $currentTime = time();
+
+if ($temp < '70'){
+    $background = "light-blue";
+}
+else {
+    $background = "orange";
+}
 ?>
 
 <!doctype html>

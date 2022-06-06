@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>Gallery</title>
+
+    <!-- Bootstrap meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Introduction to JavaScript">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="images/donut.ico" />
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/SampleJS.js"></script>
+
+    <style>
+        /* Internal Styling Here */
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section>
+             <div class="menu">
+                <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+                    <a href="http://shakonet.isd720.com" class="navbar-brand">Donuts!</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="History.html" class="nav-item nav-link">History</a>
+                            <a href="Top5.html" class="nav-item nav-link" tabindex="-1">Top 5</a>
+                            <a href="Shops.html" class="nav-item nav-link" tabindex="-1">Shops</a>
+                            <a href="Gallery.html" class="nav-item nav-link active" tabindex="-1">Gallery</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <hr>
+        <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 center text-center">
+                    <h1>Gallery</h1>
+                    <h3>Here is a Collection of Donuts from around the US and even the World</h3>
+                    <h4>Enjoy!</h4>
+                </div>
+                </div>
+
+            </div>
+            <div class="row">
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal1.jpeg" style=" height: 40%; width: 40%" class="center">
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal2.jpeg" style=" height: 40%; width: 40%" class="center">
+            </div>
+            <div class="row">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal3.jpeg" style=" height: 40%; width: 40%" class="center">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal5.webp" style=" height: 40%; width: 40%" class="center">
+            </div>
+            <div class="row">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal6.webp" style=" height: 40%; width: 40%" class="center">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal4.png" style=" height: 40%; width: 40%" class="center">
+            </div>
+            <div class="row">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal7.webp" style=" height: 40%; width: 40%" class="center">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/Gal8.jpeg" style=" height: 40%; width: 40%" class="center">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

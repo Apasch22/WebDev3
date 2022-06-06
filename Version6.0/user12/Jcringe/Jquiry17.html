@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>BRODY</title>
+</head>
+<body>
+
+<script id=blogTemplate type=tuts/template>
+	<h2> {{title}} </h2>
+	<img src={{thumbnail}} alt={{title}}>
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script>
+
+(function() {
+	var content = [
+		{
+			title: 'epic Brody Post',
+			thumbnail: 'PrintBrody.jpg',
+		},
+		{
+			title: 'brody',
+			thumbnail: 'PrintBrody.jpg',
+		},
+		{
+			title: 'le brody',
+			thumbnail: 'PrintBrody.jpg',
+		}
+	],
+		template = $.trim( $('#blogTemplate').html() ),
+		frag = '';
+
+
+
+	$.each( content, function( index, obj ) {
+		frag +=
+			template.replace( /{{title}}/ig, obj.title )
+					.replace( /{{thumbnail}}/ig, obj.thumbnail );		
+	});
+
+	$('body').append(frag);
+
+})();
+
+</script>
+</body>
+</html>

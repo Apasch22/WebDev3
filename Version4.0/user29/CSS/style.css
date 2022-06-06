@@ -1,21 +1,85 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
+
+.myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:2px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 31px;
+	text-decoration:none;
+	text-shadow:22px 1px 0px #2f6627;
+}
+. 
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
-tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
-}
+href="#" class=" pro Button">turquoise</a>`	
 
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+.button3 {
+	box-shadow: 0px 10px 14px -2px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:4px;
+	border:2px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 26px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
 }
+.buttonpro {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.red rule {
+	position:relative;
+	top:1px;
+	a href="#" class="myButton">light red</a>
+
+.myButton {
+	box-shadow:inset 0px 39px 15px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:5px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:21px;
+	padding:13px 33px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px #b23e35;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.title{
+	color: red;
+	font-family: 'Trebuchet MS', sans-serif; 
+  }
+  
+  .title-large {
+	font-size: 2rem;
+  }
+  
+  .title-small {
+	font-size: .5rem;
+	changes made:<table id="hireButtons">
+
+	<table id="footerTable">

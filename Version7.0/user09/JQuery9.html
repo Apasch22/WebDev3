@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tweets</title>
+    <style>
+      h2 span {
+        color: gray;
+        font-size: 0.8em;
+      }
+      .tweets {
+        color: white;
+        background-color: black;
+        text-align: center;
+      }
+      body {
+        background-color: black;
+      }
+      h2 {
+          color:blue;
+          font-size:3em;
+      }
+      p {
+          font-size:2em;
+      }
+      h5 {
+          font-size:1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="tweets">
+      <script id="template" type="text/x-handlebars-template">
+        {{#each this}}
+          <li>
+            <h2>{{fullName author}}</h2>
+            <p>{{tweet}}</p>
+            {{#if quote}}
+              <h5>{{quote}}</h5>
+            {{else}}
+              <h5>Author does not have a quote.</h5>
+            {{/if}}
+          </li>
+        {{/each}}
+      </script>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="handlebars-v4.7.7.js"></script>
+    <script>
+      (function () {
+        var context = [
+          {
+            author: { first: "Jeffrey", last: "Way", age: 27 },
+            tweet: "I love web development",
+            quote: "Mr. Pasch is great",
+          },
+          {
+            author: { first: "John", last: "Doe", age: 42 },
+            tweet: "Web development sucks",
+          },
+        ];
+        Handlebars.registerHelper("fullName", function (author) {
+          return author.first + " " + author.last + " - " + author.age;
+        });
+        var template = Handlebars.compile($("#template").html());
+        $("ul.tweets").append(template(context));
+      })();
+    </script>
+  </body>
+</html>
