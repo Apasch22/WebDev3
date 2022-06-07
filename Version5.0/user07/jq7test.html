@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        article {
+            width: 600px;
+            margin: auto;
+        }
+        blockquote.co {
+            float: right;
+            background: #e3e3e3;
+            font-size:  2em;
+            width: 25%
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>TEST BLOG POST</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+           <span class=co> Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </article>
+    <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+(function() {
+    var co = $('article').find('span.co').each(fuction(){
+        var $this = $(this);
+
+        $('<blockquote><blockquote>', {
+            class: 'co'
+           text: $this.text()
+        }).prependTo( $this.closest('p'))
+
+    });
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Appending Content</title>
+	<style>
+	article {
+		width: 600px;
+		margin: auto;
+	}
+	blockquote.co {
+		float: right;
+		background: #e3e3e3;
+		font-size: 2em;
+		width: 35%;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+
+
+<article>
+	<h1>My Post Of Epicness </h1>
+	<p>
+		Weezer is an American rock band formed in Los Angeles, California, in 1992. Since 2001, the band has consisted of Rivers Cuomo (lead vocals, lead guitar, keyboards), Patrick Wilson (drums, percussion, backing vocals), Brian Bell (rhythm guitar, backing vocals, keyboards), and Scott Shriner (bass, backing vocals, keyboards).
+	</p>
+	<p>
+		<span class=co>The Fog Is Coming!!!!</span>, The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!
+        The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!The Fog Is Coming!!!!
+	</p>
+	<p>
+        After signing to Geffen Records in 1993, Weezer released their self-titled debut album, also known as the Blue Album, in May 1994. Backed by music videos for the singles "Buddy Holly", "Undone – The Sweater Song", and "Say It Ain't So", the Blue Album became a multiplatinum success. Weezer's second album, Pinkerton (1996), featuring a darker, more abrasive sound, was a commercial failure and initially received mixed reviews, but achieved cult status and critical acclaim years later. Both the Blue Album and Pinkerton are now frequently cited among the best albums of the 1990s. Following the tour for Pinkerton, bassist Matt Sharp left the band and Weezer went on hiatus.
+	</p>
+	<p>
+	I think yes I think yes I think yes I think yes I think yes I think yes
+	</p>
+	<p>
+        <img
+    src="weezerblue.jpeg"
+    style="width: 100px; height: 100px"
+    />
+	</p>
+</article>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+<script>
+
+(function() {
+
+	var co = $('article').find('span.co').each(function() {
+		var $this = $(this);
+
+		$('<blockquote></blockquote>', {
+			class: 'co',
+			text: $this.text()
+		}).prependTo( $this.closest('p') );
+		
+	});
+	
+
+})();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

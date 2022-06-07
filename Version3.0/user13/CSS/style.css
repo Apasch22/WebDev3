@@ -11,11 +11,24 @@ table {
 tr {
 	border: 1px solid #ffffff;
 	text-align: center;
-	background-color:#9FB6CD; 
+	background-color: #9FB6CD;
 }
 
 th {
 	text-align: center;
 	color: #ffffff;
 	background-color: #003366;
+}
+
+body {
+	background: url(https://mavenprodcontent.blob.core.windows.net/media/houseofblues_hou/Event%20Detail%20Images/0906_Keshi_tm_2426x1365.jpg);
+}
+
+ul {
+	list-style-image: url(https://www.greenchildmagazine.com/wp-content/uploads/2017/07/pexels-photo-484154.jpeg);
+	color: white;
+}
+
+ol {
+	background-color: blue;
 }

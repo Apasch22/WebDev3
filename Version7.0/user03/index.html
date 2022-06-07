@@ -1,221 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Version 7.0 
-    Name:  
-    Date Completed: 
--->
+    <link rel="icon" type="image/png" href="images/yomama5.png" />
+<!--Version 3.0
+        Name:
+        Date Completed:
+    -->
 
 <head>
-    <title>Dynamic Webpage</title>
 
-    <!-- Bootstrap meta data -->
+
+
+    <title>Web Dev User ## </title>
+
+    
+
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Introduction to JavaScript">
+    <meta name="description" content="SHS WebDev Version 3.0">
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- JavaScript -->
     <!-- These are needed to get the responsive menu to work -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script language=javascript src="https://unpkg.com/scrollreveal">ScrollReveal().reveal('.table',{ delay: 400 })</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <style>
-        /* Internal Styling Here */
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        .menu {
+            margin: 0px;
+        
+            cursor:url("images/CURESURE2.png"), default;
+        }
+
+        .wideMargin {
+            margin: 15px;
+            
+            cursor:url("images/CURESURE2.png"), default;
+        }
+
+        footer {
+            font-size: 12px;
+            text-align: center;
+            
+            cursor:url("images/CURESURE2.png"), default;
+        }
+        #Fonts {
+            width: 100%
+            
+        }
+
+        body {
+            background-image: url("images/yomama3.png");
+       
+            cursor:url("images/CURESURE2.png"), default;
+        }
+
+    img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor:url("images/CURESURE2.png"), default;
+  }
+
+ 
+    li a {
+      display: block;
+      padding: 8px;
+      cursor:url("images/CURESURE2.png"), default;
+    }
     </style>
 
 </head>
 
 <body>
-    <main>
-        <div id="built-in-functions">
-            <!-- ALERT-->
-            <script>
-                alert('Go Sabers!');
-            </script>
-            <!--PRINT-->
-            <script>
-                function printWindow(){
-                    window.print();
-                }
-            </script>
-            <!--LENGTH-->
-            <script>
-                function getLength() {
-                    document.getElementById("length").innerHTML = document.title.length;
-                }
-            </script>
-            <!-- FOCUS-->
-            <script>
-                function getFocus() {
-                    document.getElementById("focusButton").focus();
-                }
-            </script>
-            <!-- CLICK-->
-            <script>
-                function clickSimulation() {
-                    document.getElementById("Check").click();
-                }
-            </script>
-            <script>
-                function getDate() {
-                    document.getElementById("date").innerHTML = Date();
-                }
-            </script>
 
-            <div class="container-fluid mt-3 mb-3">
-                <div class="row">
-                    <!--PRINT-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" value="print this page" onclick="printWindow()">Print this
-                            page</button>
-                    </div>
-                    <!--LENGTH-->
-                    <div class="col-md-3">
-                        <button class="btn btn-dark btn-md" onclick="getLength()">The title has this many
-                            characters</button>
-                    </div>
-                    <div class="col-md-1">
-                        <p id="length"></p>
-                    </div>
-                    <!--FOCUS-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" onclick="getFocus()">Focus</button>
-                    </div>
-                    <!-- CLICK-->
-                    <div class="col-md-1">
-                        <form>
-                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
-                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
-                        </form>
-                    </div>
-                    <!--DATE-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" onclick="getDate()">Get Date</button>
-                    </div>
-                    <div class="col-md-3">
-                        <p id="date"></p>
-                    </div>
-                </div>
-            </div>
+
+    
+    <!---------------------------------- Begin the nav-bar ------------->
+    <nav class="navbar navbar-expand-md"style="background-color:rgb(59, 79, 255); border: 5px solid yellow;">
+     
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active-page" href="#"style="color:yellow;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="youtube.html"style="color:yellow;">Youtube</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="twitch.html"style="color:yellow;">Twitch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="future.html"style="color:yellow;">Future</a>
+                </li>
+            </ul>
         </div>
-        <hr>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5">
-                    <h1>Heading for a long list</h1>
-                    <ol>
-                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.
-                                    <ol>
-                                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            <ol>
-                                                <li>Lorem ipsum dolor sit amet, consectetuer.</li>
-                                            </ol>
-                                        </li>
-                                        <li>Aliquam tincidunt mauris eu risus.</li>
-                                        <li>Vestibulum auctor dapibus neque.</li>
-                                    </ol>
-                                </li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-                        </li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.</li>
-                    </ol>
+    </nav>
+    
+      
+    <!---------------------------------- End the nav-bar ------------->
 
-                </div>
+        <table class="table"style="color:yellow; width: auto; border: 5px solid yellow; margin-left:auto;margin-right:auto; margin-top: 15px;">
+            <td style="background-color:rgb(59, 79, 255)"> 
+                <h1><strong>The HaloZombies Website</strong></h1>
+        </td>
+        </table>
+    
+        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+       <table class="table"style="color:yellow; width:1000px; border: 5px solid yellow; margin-left:auto;margin-right:auto;margin-bottom:100px;">
+           <td style="background-color:rgb(59, 79, 255)"> 
+        <strong style="font-size: large;">
+            Welcome to the HaloZombies website! This is where you will find information about my Youtube and Twitch accounts along with what I plan to do in the future.
+            This page specifically is for general information about me and where to contact me.
+        </strong>
+    </td>
+        </table>
+        <img src="images/yomama5.png"style="width:250px;height:250px; border: 5px solid yellow;"class="center">
+   
+        <table class="table"style="color:yellow; width: auto; border: 5px solid yellow; margin-top: 100px; margin-left:auto;margin-right:auto;">
+            <td style="background-color:rgb(59, 79, 255)"> 
+                <h2>General Info</h2>
+        </td>
+        </table>
 
-                <div class="col-md-2 text-center">
-                    <button class="btn btn-danger btn-lg mt-3 container" onclick="firstSelector()">Try it
-                        1</button>
 
-                    <button class="btn btn-info btn-lg mt-3 container" onclick="secondSelector()">Try it
-                        2</button>
+        <table class="table"style="color:yellow; width:1000px; border: 5px solid yellow; margin-left:auto;margin-right:auto;">
+            <td style="background-color:rgb(59, 79, 255)"> 
+        <p>
+            My name is Matthew and I am, as of writing this, 15 years old. I play many games, though my main ones are Geometry Dash and Minecraft. I have a Youtube channel where I post Geometry Dash videos and a Twitch channel where I stream GD and Minecraft (sometimes). I have a Discord account, and I also have a server called The Ultimate Hub where I am trying to put everything I can think of into a single server. My favorite games are Minecraft, Geometry Dash, World of Goo, and Portal 1 and 2.
+        </p>
+</td>
+</table>
 
-                    <button class="btn btn-secondary btn-lg mt-3 container" onclick="thirdSelector()">Try it
-                        3</button>
+<div class="container" >
+    <a href="https://discord.com/channels/967492813912674314/967503843267084389" class="btn btn-info center" role="button" style="color:yellow; border: 5px solid yellow; background-color:rgb(59, 79, 255);">The Ultimate Hub Invite Button</a>
+</div>
 
-                    <button class="btn btn-primary btn-lg mt-3 container" onclick="window.location.reload()">Try
-                        it
-                        4</button>
-                </div>
+<table class="table"style="color:yellow; width: auto; border: 5px solid yellow; margin-left:auto;margin-right:auto;margin-top:100px;">
+    <td style="background-color:rgb(59, 79, 255)"> 
+        <h2>Contact Info</h2>
+</td>
+</table>
 
-                <div class="col-md-5">
-                    <h1>My shopping list</h1>
+<table class="table htmlclass"style="color:yellow; width:1000px; border: 5px solid yellow; margin-left:auto;margin-right:auto;">
+    <td style="background-color:rgb(59, 79, 255)"> 
+<p>
+    There are a few ways to contact me, the easiest ones are emailing me through Gmail, DMing me on Discord, and messaging me on Steam. My email is HaloZombiesmp@gmail.com, my Discord is HaloZombies#1775, and my Steam account is SuperBomb9009. There are also other ways of messaging me and those would be to DM me inside of Geometry Dash and Comment on one of my videos (I guess lol). But you need Geometry Dash to message me there and you are not guaranteed a response if you comment on a video.
+</p>
+</td>
+</table>
 
-                    <div>
-                        <label for="item">Enter a new item:</label>
-                        <input type="text" name="item" id="item">
-                        <button id="aggregating-list">Add item</button>
-                    </div>
 
-                    <ul>
 
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-        <script id="lists">
-            function firstSelector() {
-                document.querySelector("li").style.backgroundColor = "#dc3545";
-            }
-            function secondSelector() {
-                var x = document.querySelectorAll("li");
-                var i;
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.backgroundColor = "#17a2b8";
-                }
-            }
-            function thirdSelector() {
-                document.querySelector("ol ol li").style.backgroundColor = "#6c757d";
-            }
-        </script>
-        <script id="shopping">
-            const list = document.querySelector('ul');
-            const input = document.querySelector('input');
-            const button = document.getElementById('aggregating-list');
-
-            button.onclick = function () {
-                let myItem = input.value;
-                input.value = '';
-
-                const listItem = document.createElement('li');
-                const listText = document.createElement('span');
-                const listBtn = document.createElement('button');
-
-                listItem.appendChild(listText);
-                listText.textContent = myItem;
-                listItem.appendChild(listBtn);
-                listBtn.textContent = 'Delete';
-                list.appendChild(listItem);
-
-                listBtn.onclick = function (e) {
-                    list.removeChild(listItem);
-                }
-
-                input.focus();
-            }
-        </script>
     </main>
-    <div id="container" style="height: 3000px; width: 1000px;">
-        <a href="#"><button type="button" id="focusButton" style="margin-top: 3000px;">You focused on me!</button></a>
-    </div>
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
+
+    <!---------------------------------- Begin the footer ------------->
+    <footer class="page-footer font-small blue pt-4" style="background-color: rgb(59, 79, 255); border: 5px solid yellow;">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+      
+          <!-- Grid row -->
+          <div class="row">
+      
+            <!-- Grid column -->
+            <div class=" mt-md-0 mt-3"style="width:600px">
+      
+              <!-- Content -->
+              <h5 class="text-uppercase"style="color:yellow;">Thank you!</h5>
+              <p style="color:yellow">Thanks for checking out my website, if you do find any of this interesting, maybe check out my Youtube or Twitch channels! I try to be at least somewhat active, especially on youtube. Also, if you want to talk to me, the best way is probably discord so feel free to message me there but if it is something more formal I guess email is better. So yeah lol thx for reading!</p>
+      
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="clearfix w-100 d-md-none pb-3">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3"style="margin-left:100px">
+      
+              <!-- Links -->
+              <h5 class="text-uppercase"style="color:yellow">Today Is:</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                    <a id="demo" style="color:yellow"></a>
+
+                    <script>
+                    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    
+                    const d = new Date();
+                    let day = days[d.getDay()];
+                    document.getElementById("demo").innerHTML = day;
+                    </script>
+                    
+                </li>
+                <li>
+                    <a id="demo2" style="color:yellow"></a>
+
+                    <script>
+                    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                    
+                    const e = new Date();
+                    let month = months[e.getMonth()];
+                    document.getElementById("demo2").innerHTML = month;
+                    </script>
+                </li>
+                <li>
+                    <a id="demo3" style="color:yellow"></a>
+
+                    <script>
+                    const f = new Date();
+                    document.getElementById("demo3").innerHTML = f.getDate();
+                    </script>
+                </li>
+                <li>
+                    <a id="demo4" style="color:yellow"></a>
+
+                </li>
+              </ul>
+      
+            </div>
+
+                <!-- Grid column -->
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+              <!-- Links -->
+              <h5 class="text-uppercase"style="color:yellow">My Socials</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" style="color: yellow">Gmail</a>
+                </li>
+                <li>
+                  <a href="#!" style="color: yellow">Youtube</a>
+                </li>
+                <li>
+                  <a href="#!" style="color: yellow">Twitch</a>
+                </li>
+                <li>
+                  <a href="#!" style="color: yellow">Discord</a>
+                </li>
+              
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3"style="color:yellow">© 2020 Copyright:
+          <a href="/" style="color:yellow"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+    <!---------------------------------- End the footer ------------->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </body>
 
 </html>
+<!--a-->

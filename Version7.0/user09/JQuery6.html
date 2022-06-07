@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Animate</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        padding: 2em;
+        position: relative;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img
+        style="width: 300px; height: 300px"
+        src="https://www.cambridge.org/elt/blog/wp-content/uploads/2019/07/Sad-Face-Emoji-480x480.png.webp"
+      />
+    </div>
+    <img
+      style="width: 500px; height: 300px"
+      class="center"
+      src="https://gray-wowt-prod.cdn.arcpublishing.com/resizer/Tngd9uUm69GuPsVQvYnKbuHQbDY=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/NQQS5AUHUVE4XOG7NSQYLA2XWI.jpg"
+    />
+    <p><button>Center</button></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+      (function () {
+        var box = $("div.box"),
+          w = $(window).width() / 2.75;
+        h = $(window).height() / 2.4;
+        $("button").on("click", function () {
+          box
+            .animate({
+              left: w,
+              position: "absolute",
+            })
+            .animate(
+              {
+                top: h,
+              },
+              { duration: 2000, queue: false }
+            );
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Appending Content</title>
+    <style>
+      article {
+        width: 600px;
+        margin: auto;
+      }
+      blockquote.co {
+        float: right;
+        background: #e3e3e3;
+        font-size: 2em;
+        width: 35%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>My Awesome Post</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie
+        turpis ut elit malesuada gravida. Donec risus nunc, lacinia ut.
+      </p>
+      <p>
+        <span class="co">Lorem ipsum dolor sit amet</span>, consectetur
+        adipiscing elit. Sed molestie turpis ut elit malesuada gravida. Donec
+        risus nunc, lacinia ut. Donec eleifend mauris vel leo rutrum ornare.
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Pellentesque tincidunt pharetra magna quis scelerisque.
+        Ut facilisis, enim eu placerat suscipit, nulla orci iaculis tortor,
+        vitae pellentesque urna ligula id ex. Duis rhoncus posuere arcu eu
+        pellentesque. Vestibulum rhoncus gravida diam finibus consectetur.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia curae;
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet,
+        <span class="co">consectetur adipiscing elit</span>. Sed molestie turpis
+        ut elit malesuada gravida. Donec risus nunc, lacinia ut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie
+        turpis ut elit malesuada gravida. Donec risus nunc, lacinia ut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie
+        turpis ut elit malesuada gravida. Donec risus nunc, lacinia ut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie
+        turpis ut elit malesuada gravida.
+        <span class="co">Donec risus nunc, lacinia ut</span>.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie
+        turpis ut elit malesuada gravida. Donec risus nunc, lacinia ut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie
+        turpis ut elit malesuada gravida. Donec risus nunc, lacinia ut.
+      </p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/2000px-Mr._Smiley_Face.svg.png"
+        style="width: 20vw; margin-left:80px;"
+      />
+    </article>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+      (function () {
+        var co = $("article")
+          .find("span.co")
+          .each(function () {
+            var $this = $(this);
+
+            $("<blockquote></blockquote>", {
+              class: "co",
+              text: $this.text(),
+            }).prependTo($this.closest("p"));
+          });
+      })();
+    </script>
+  </body>
+</html>

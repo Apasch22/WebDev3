@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset=utf-8>
+    <title>Appending content</title>
+    <style>
+        article {
+            Width: 600px;
+            margin: auto;
+        }
+
+        blockquote.co {
+            float: right;
+            background: #e3e3e3;
+            font-size: 2em;
+            width: 33%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <center><img src="/Version5.0/user16/CBL.jpeg" width="700px" height="200px"></center>
+    <article>
+        <h1>My School Year</h1>
+        <p> Its been great but there have been off days.
+        </p>
+        <p>
+            Quarter 1 was great figuring out where my classes are on the first day.
+            First quarter flew by slow.
+            All my classes were cool manufacturing and construction was cool because i got to build a table. <span class="co">Quarter 1</span>
+             energy, food, and the outdoors was a cool experience class. Also Math and Modern us history were easy to me.
+            I understood the content well and did well on the exams.
+        </p>
+        <p>
+            Quarter 1 was also great, found out directions and got to my class without getting loss.
+            Second quarter flew by fast cause some of the week we were online.
+            All my classes were cool ceramics was cool because i got to use clay and make clay pots. <span class="co">Quarter 2</span>
+             Sports and entertainment marketing i got to learn a little about marketing and what goes into it. Also Math and Modern us history were easy to me and i still had these classes.
+            I understood the content in every class i had and had good grades
+        
+        </p>
+        <p>
+            Quarter 3 was great, most of my classes were easy.
+            Third quarter flew by fast.
+            All my classes were cool Advanced sports performance was cool because i got to weight lift and have free time to play basketball. <span class="co">Quarter 3</span>
+             healthy lifestles was a easy class but require alot of time on homework but there was so much of it. 
+            Instead of Math and Modern US History, this quarter i switched to chemistry and english.
+        </p>
+        <p>
+             Quarter 4 is still going and its flying by quick.
+            Gonna give my all in the next coming weeks.
+            Can't wait for summer.
+        </p>
+       
+    </article>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+        (function () {
+            var co = $('span.co').each(function () {
+                var $this = $(this);
+
+                $('<blockquote></blockquote>', {
+                    class: 'co',
+                    text: $this.text()
+                }).prependTo($this.closest('p'));
+
+            })
+        })();
+    </script>
+
+
+</body>
+
+</html>

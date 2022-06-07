@@ -1,43 +1,35 @@
-.body-wideMargin {
-    margin: 50px;
-    font-size: 100%;
-    line-height: 1.5;
-    font-family: Roboto;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    align-items: center;
+   
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
 }
 
 button {
-    padding: 5px;
+    background-color: rebeccapurple;
+    color: white;
+   
+    font-family: inherit;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.1s linear;
 }
 
-ol {
-    list-style-type: decimal-leading-zero;
+button:focus {
+    outline: none;
 }
 
-ol ol {
-    margin-left: 0.9em;
-}
-
-ol li {
-    line-height: 1.5;
-}
-
-li li {
-    list-style-type: lower-alpha;
-}
-
-li li li {
-    list-style-type: square;
-}
-
-li li li li {
-    list-style-type: circle;
-}
-
-h1 {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 400;
-    border-bottom: 1px solid black;
-    margin-bottom: 1em;
+button:active {
+    box-shadow: 0;
+    transform: translate(2px, 2px);
 }

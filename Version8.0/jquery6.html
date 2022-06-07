@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html>
+<head>
+   <meta charset=utf-8>
+   <title>jq6 test</title>
+</head>
+<body>
+<div class="container">
+    <img
+    src="weezerblue.jpeg"
+    style="width: 100px; height: 100px"
+    />
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+(function(){
+   $('div.container').delegate('img','click',function(){
+       console.log('clicked');
+       $(this).clone().appendTo('.container');
+   });
+})();
+</script>
+</body>
+</html>

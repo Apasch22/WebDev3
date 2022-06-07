@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Q&A</title>
+  </head>
+  <body>
+    <script id="blogTemplate" type="tuts/template">
+      <h2> {{title}} </h2>
+      <img src={{thumbnail}} style="width:300px" alt={{title}}>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+      (function () {
+        var content = [
+            {
+              title: "My awesome blog post",
+              thumbnail:
+                "https://cdn.shopify.com/s/files/1/1061/1924/products/Flushed_Emoji_Icon_5e6ce936-4add-472b-96ba-9082998adcf7_large.png?v=1571606089",
+            },
+            {
+              title: "My second awesome blog post",
+              thumbnail:
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR_Gs2lsVDuRxQgvtkXEmiME_OyKH9Cd8A64QniI9Q_tzF14nKKQocj5DlQ5z8EztLZQM:https://media.istockphoto.com/vectors/thinking-emoticon-question-face-emoji-with-eyeglasses-vector-vector-id1310060658%3Fk%3D20%26m%3D1310060658%26s%3D612x612%26w%3D0%26h%3DxinMMHOLWfxXU-8zDafFNH4nOjlGaj9dytP9wlXTORM%3D&usqp=CAU",
+            },
+            {
+              title: "My third awesome blog post",
+              thumbnail:
+                "https://images.homedepot.ca/productimages/p_1001648361.jpg?wid=1000&hei=1000&op_sharpen=1&product-images=l",
+            },
+          ],
+          template = $.trim($("#blogTemplate").html());
+        frag = "";
+
+        $.each(content, function (index, obj) {
+          frag += template
+            .replace(/{{title}}/gi, obj.title)
+            .replace(/{{thumbnail}}/gi, obj.thumbnail);
+        });
+        $("body").append(frag);
+      })();
+    </script>
+  </body>
+</html>
