@@ -9,13 +9,28 @@ table {
 }
 
 tr {
-	border: 1px solid #ffffff;
+	border: 1px solid #000000;
 	text-align: center;
-	background-color:#9FB6CD; 
+	background-color:#9000ff; 
+	background-image: images/duck.png;
 }
 
 th {
 	text-align: center;
 	color: #ffffff;
 	background-color: #003366;
+}
+
+ul {
+	color: #e50e0e;
+	text-align: center;
+}
+
+ol {
+	color: #9000ff;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
 }

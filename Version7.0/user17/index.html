@@ -1,221 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--Version 7.0 
-    Name:  
-    Date Completed: 
--->
+<!-- poking around in the source today, aren't we? -->
+<!-- almost all styling for the whole site is external and is located in the css folder -->
+<html>
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<!-- js not supported message -->
+<noscript>
+<div class="alert">
+  <strong>Warning! Javascript is not supported by your browser! Some features will not work! </strong>
+</div>
+</noscript>
 
-<head>
-    <title>Dynamic Webpage</title>
+<div class="all">
 
-    <!-- Bootstrap meta data -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Introduction to JavaScript">
+  <!-- bootstrap links and tags -->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="CSS/style.css">
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- JavaScript -->
-    <!-- These are needed to get the responsive menu to work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- link bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- link bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <style>
-        /* Internal Styling Here */
-    </style>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title> Home Page </title>
 
-</head>
+<!-- link style.css -->
+<link rel="stylesheet" href="css/style.css">
 
-<body>
-    <main>
-        <div id="built-in-functions">
-            <!-- ALERT-->
-            <script>
-                alert('Go Sabers!');
-            </script>
-            <!--PRINT-->
-            <script>
-                function printWindow(){
-                    window.print();
-                }
-            </script>
-            <!--LENGTH-->
-            <script>
-                function getLength() {
-                    document.getElementById("length").innerHTML = document.title.length;
-                }
-            </script>
-            <!-- FOCUS-->
-            <script>
-                function getFocus() {
-                    document.getElementById("focusButton").focus();
-                }
-            </script>
-            <!-- CLICK-->
-            <script>
-                function clickSimulation() {
-                    document.getElementById("Check").click();
-                }
-            </script>
-            <script>
-                function getDate() {
-                    document.getElementById("date").innerHTML = Date();
-                }
-            </script>
 
-            <div class="container-fluid mt-3 mb-3">
-                <div class="row">
-                    <!--PRINT-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" value="print this page" onclick="printWindow()">Print this
-                            page</button>
-                    </div>
-                    <!--LENGTH-->
-                    <div class="col-md-3">
-                        <button class="btn btn-dark btn-md" onclick="getLength()">The title has this many
-                            characters</button>
-                    </div>
-                    <div class="col-md-1">
-                        <p id="length"></p>
-                    </div>
-                    <!--FOCUS-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" onclick="getFocus()">Focus</button>
-                    </div>
-                    <!-- CLICK-->
-                    <div class="col-md-1">
-                        <form>
-                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
-                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
-                        </form>
-                    </div>
-                    <!--DATE-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" onclick="getDate()">Get Date</button>
-                    </div>
-                    <div class="col-md-3">
-                        <p id="date"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5">
-                    <h1>Heading for a long list</h1>
-                    <ol>
-                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.
-                                    <ol>
-                                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            <ol>
-                                                <li>Lorem ipsum dolor sit amet, consectetuer.</li>
-                                            </ol>
-                                        </li>
-                                        <li>Aliquam tincidunt mauris eu risus.</li>
-                                        <li>Vestibulum auctor dapibus neque.</li>
-                                    </ol>
-                                </li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-                        </li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.</li>
-                    </ol>
+<!-- navbar -->
+<div class="topnav">
+  <a class="active" href="index.html"> Home </a>
+  <a href="contact.html"> Contact </a>
+  <a href="devlog.html"> Devlogs </a>
+</div>
 
-                </div>
+<div class="body">
+<!-- head element -->
+  <head>
 
-                <div class="col-md-2 text-center">
-                    <button class="btn btn-danger btn-lg mt-3 container" onclick="firstSelector()">Try it
-                        1</button>
 
-                    <button class="btn btn-info btn-lg mt-3 container" onclick="secondSelector()">Try it
-                        2</button>
+<!-- banner image -->
+             <img alt="nebula49dev" src="images/banner.png" class=title/>
 
-                    <button class="btn btn-secondary btn-lg mt-3 container" onclick="thirdSelector()">Try it
-                        3</button>
+<hr>
+<!-- title (uses bootstrap) -->
+<div class="jumbotron">
+    <h2 class="display-4"> Welcome to NEBULA49DEV's website! </h2>
+      <h3 class="my-4">  Not much goes on here, but enjoy your stay! </h3>
+</div>
+        <h4> <a class="button" href="https://www.github.com/IsaiahSloan"> My GitHub </a> </h4>
+        <h4> <a class="button" href="https://nebula49.itch.io/"> My Itch </a> </h4>
 
-                    <button class="btn btn-primary btn-lg mt-3 container" onclick="window.location.reload()">Try
-                        it
-                        4</button>
-                </div>
+<!-- javascript link -->
 
-                <div class="col-md-5">
-                    <h1>My shopping list</h1>
 
-                    <div>
-                        <label for="item">Enter a new item:</label>
-                        <input type="text" name="item" id="item">
-                        <button id="aggregating-list">Add item</button>
-                    </div>
+  </head>
+<!-- ========================! main contents below !======================== -->
+  <body>
 
-                    <ul>
+<!-- about me and open source declaration -->
+    <article>
+<h2>About me</h2>
+<p> I am a developer who makes whatever I feel like.
+I don't make any profit and I am completely solo. I do
+this entirely for fun and I really enjoy doing things
+the hard way. </p>
+      <aside>
+        This web page was made entirely by me with HTML5,
+        and the code is completely free and open source.
+        You can use this without giving me any credit.
+      </aside>
 
-                    </ul>
-                </div>
+    </article>
 
-            </div>
-        </div>
-        <script id="lists">
-            function firstSelector() {
-                document.querySelector("li").style.backgroundColor = "#dc3545";
-            }
-            function secondSelector() {
-                var x = document.querySelectorAll("li");
-                var i;
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.backgroundColor = "#17a2b8";
-                }
-            }
-            function thirdSelector() {
-                document.querySelector("ol ol li").style.backgroundColor = "#6c757d";
-            }
-        </script>
-        <script id="shopping">
-            const list = document.querySelector('ul');
-            const input = document.querySelector('input');
-            const button = document.getElementById('aggregating-list');
 
-            button.onclick = function () {
-                let myItem = input.value;
-                input.value = '';
+<!-- what i use + unordered lists -->
+<h2>What I use</h2>
+<p> I use a variety of tools for different tasks, and a
+a few different platforms to upload on. What I use to
+upload on is: </p>
+  <ul>
+    <li> Github (software) </li>
+    <li> Itch.io (games) </li>
+  </ul>
+<p> And I develop using: </p>
+  <ul>
+    <li> Atom (HTML/CSS) </li>
+    <li> GMS2 (GML) </li>
+    <li> SFXR (sound effects) </li>
+    <li> Audacity (sound editing) </li>
+    <li> paint.net/Photoshop (images) </li>
+    <li> FilmoraX (video editing) </li>
+  </ul>
 
-                const listItem = document.createElement('li');
-                const listText = document.createElement('span');
-                const listBtn = document.createElement('button');
+<!-- buttons -->
+<a class="button" href="contact.html"> Contact Me </a>
+<p> I am not currently accepting hiring offers.
+If you have a request or suggestion, email me. </p>
 
-                listItem.appendChild(listText);
-                listText.textContent = myItem;
-                listItem.appendChild(listBtn);
-                listBtn.textContent = 'Delete';
-                list.appendChild(listItem);
+<h2> My Projects </h2>
 
-                listBtn.onclick = function (e) {
-                    list.removeChild(listItem);
-                }
+<!-- embed from itch.io -->
+<iframe frameborder="0" src="https://itch.io/embed/877472?dark=true" width="552" height="167"><a href="https://nebula49.itch.io/a-normal-survey">A Normal Survey (PROTOTYPE) by nebula49dev</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed/876602?dark=true" width="552" height="167"><a href="https://nebula49.itch.io/the-defenders">The Defenders by nebula49dev</a></iframe>
 
-                input.focus();
-            }
-        </script>
-    </main>
-    <div id="container" style="height: 3000px; width: 1000px;">
-        <a href="#"><button type="button" id="focusButton" style="margin-top: 3000px;">You focused on me!</button></a>
-    </div>
-</body>
 
+
+
+  </body>
+<!-- ========================! main contents above !======================== -->
+
+<!-- footer content -->
+  <footer>
+    <table>
+      <tr>
+        <th> My current projects: </th>
+        <th> How long I am working for: </th>
+      </tr>
+      <tr>
+        <td> This Website </td>
+        <td> May 9th-13th 2022 </td>
+      </tr>
+    </table>
+  </footer>
+<p class="small-text"> @nebula49 <a id="getYear"></a> </p>
+<!-- link script.js -->
+<script src="js/script.js"></script>
+</div>
+</div>
 </html>
