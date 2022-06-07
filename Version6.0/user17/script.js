@@ -13,3 +13,7 @@ function changeText() {
    window.setTimeout("Scroll()", 0);
    }
    Scroll();
+
+function aFunc() {
+    alert("how many video games can you play when not you video are games playing instead of not doing something? true or false");
+}
