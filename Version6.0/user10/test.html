@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 5.0
+    Name:
+    Date Completed:
+-->
+
+<head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev JavaScript Practice">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/script.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        .menu {
+            margin: 0px;
+        }
+
+        .wideMargin {
+            margin: 15px;
+        }
+
+        #footer {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        #btn {
+            background-color: rebeccapurple;
+            color: white;
+            padding: 1rem;
+            font-family: inherit;
+            font-size: 1.2rem;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            border: none;
+            transition: transform 0.1s linear;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:active {
+            box-shadow: 0;
+            transform: translate(2px, 2px);
+        }
+    </style>
+</head>
+
+<body>
+    <!---------------------------------- Begin the nav-bar ------------->
+    <div class="menu">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com/WebDev" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="#" class="nav-item nav-link">About Me</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Music</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Lists</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Games</a>
+                    <a href="script.html" class="nav-item nav-link active" tabindex="-1">JavaScript</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled"
+                        tabindex="-1">Contact</a>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!---------------------------------- End the nav-bar ------------->
+
+    <div class="wideMargin" id="content">
+        <h1 class="text-left my-3">My JavaScript Examples</h1><!-- Edit this line for the title of your page -->
+        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4" style="background-color:yellow;">
+                    <center>
+                        <p id="textChange"> My name is User 06</p>
+                    </center>
+                </div>
+                <div class="col-sm-4" style="background-color:orange;">
+                    <center><button type="button" onclick="changeText()">Click if you like</button></center>
+                </div>
+                <div class="col-sm-4" style="background-color:yellow;">PUT YOUR CODE HERE</div>
+            </div>
+            <title>Love Tester</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name="distribution" content="Global" />
+            <meta name="copyright" content="JavaScriptBank.com" />
+            </head>
+
+            <body>
+                <center>
+                    <h1>Love Tester</h1>
+                    <SCRIPT LANGUAGE="JavaScript">
+                        !--Begin
+                        function calc() {
+
+                            first = document.loveform.name1.value.toUpperCase();
+                            firstlength = document.loveform.name1.value.length;
+                            second = document.loveform.name2.value.toUpperCase();
+                            secondlength = document.loveform.name2.value.length;
+                            var LoveCount = 0;
+
+                            for (Count = 0; Count < firstlength; Count++) {
+                                letter1 = first.substring(Count, Count + 1);
+                                if (letter1 == 'L') LoveCount += 2;
+                                if (letter1 == 'O') LoveCount += 2;
+                                if (letter1 == 'V') LoveCount += 2;
+                                if (letter1 == 'E') LoveCount += 2;
+                                if (letter1 == 'Y') LoveCount += 3;
+                                if (letter1 == 'O') LoveCount += 1;
+                                if (letter1 == 'U') LoveCount += 3;
+                            }
+
+                            for (Count = 0; Count < secondlength; Count++) {
+                                letter2 = second.substring(Count, Count + 1);
+                                if (letter2 == 'L') LoveCount += 2;
+                                if (letter2 == 'O') LoveCount += 2;
+                                if (letter2 == 'V') LoveCount += 2;
+                                if (letter2 == 'E') LoveCount += 2;
+                                if (letter2 == 'Y') LoveCount += 3;
+                                if (letter2 == 'O') LoveCount += 1;
+                                if (letter2 == 'U') LoveCount += 3;
+                            }
+
+                            amount = 0;
+                            if (LoveCount > 0) amount = 5 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 2) amount = 10 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 4) amount = 20 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 6) amount = 30 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 8) amount = 40 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 10) amount = 50 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 12) amount = 60 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 14) amount = 70 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 16) amount = 80 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 18) amount = 90 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 20) amount = 100 - ((firstlength + secondlength) / 2)
+                            if (LoveCount > 22) amount = 110 - ((firstlength + secondlength) / 2)
+
+                            if (firstlength == 0 || secondlength == 0) amount = "Err";
+                            if (amount < 0) amount = 0;
+                            if (amount > 99) amount = 99;
+
+                            document.loveform.output.value = amount + "%";
+                        }
+// End -->
+
+                    </script>
+
+                    <form name=loveform>
+
+                        <input value="Kevin Doan" name="name1" type="text" size="20"> +
+                        <input value="Austin Pasch" name="name2" type="text" size="20"> =
+                        <input value="" name="output" type="text" size="6">
+                        <br>
+                        <br>
+                        <input value="Calculate!" name="calculate" type="button" value="calculate" onclick="calc()">
+                    </form>
+                    <script>
+                        function troll() {
+                            location.assign('https://www.youtube.com/watch?v=C8Y0SZrPdX0');
+                        }
+                    </script>
+                    <p ondblclick="troll()">Doubleclick if you love me!! ;)</p>
+
+                    <p id="demo"></p>
+                </center>
+                <script language="javascript">
+                    status = "john chacko !!!!!"
+                    var a = new Array(), n = ""
+                    a[1] = 'I'; a[2] = ' '; a[3] = 'A'; a[4] = 'M'; a[5] = ' '; a[6] = 'A'; a[7] = ' '; a[8] = 'F'; a[9] = 'O'; a[10] = 'O'; a[11] = 'L'; a[12] = ' '; a[13] = ' '; a[14] = '?';
+                    function one() {
+                        t = document.f.txt.value
+                        j = t.length
+                        if (j > 0) {
+                            for (var i = 1; i <= j; i++) {
+                                n = n + a[i]
+                                if (i == 14) {
+                                    document.f.txt.value = ""
+                                    n = ""
+                                }
+                            }
+                        }
+                        document.f.txt.value = n
+                        n = ""
+                        setTimeout("one()", 1)
+                    }
+                    function on() {
+                        one()
+                    }
+
+
+                </script>
+                <br>
+                <br>
+
+                <center>
+                    <h1 onmouseover="style.color='purple'" onmouseout="style.color='green'">BARNEY</h1>
+                </center>
+
+            </body>
+
+            <script>
+                function displayDate() {
+                    document.getElementById("demo").innerHTML = Date();
+                }
+            </script>
+
+            <head>
+                <script>
+                    function caps() {
+                        var x = document.getElementById("fname");
+                        x.value = x.value.toUpperCase();
+                    }
+                </script>
+            </head>
+            WHY ARE YOU YELLING? <input type="text" id="fname" onkeyup="caps()">
+
+            <body>
+                <br>
+                <br>
+                <script>
+                    function myFunction() {
+                        document.getElementById("demo").innerHTML = "PLAGIARIZER!!";
+                    }
+                </script>
+                <br>
+                Copy me!<input type="text" value="Someone's essay" onselect="myFunction()">
+
+                <h1 id="demo"></h1>
+
+                <body onload="on()" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed=""
+                    data-new-gr-c-s-loaded="14.1058.0">
+                    <center>
+                        <h2>What are you?</h2>
+                        <form name="f">
+                            <textarea name="txt" cols="20" rows="5"></textarea>
+                        </form>
+                    </center>
+                  
+
+                    <script type="text/javascript"
+                        src="https:////www.tripwiremagazine.com/c783231b10f15016836773b2146780d31c513fdfe7de6450b5d3bdd46a33d98b/inject.js"></script>
+
+                    <body>
+                        <br>
+                        <br>
+                        <br>
+                        <center>
+                            <div class=title>You suck at math.</div>
+                            <table border="2">
+                                <tr>
+                                    <td><input type="button" value="c" onclick="clr()" /> </td>
+                                    <td colspan="3"><input type="text" id="textval" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="+" onclick="display('+')" /> </td>
+                                    <td><input type="button" value="1" onclick="display('1')" /> </td>
+                                    <td><input type="button" value="2" onclick="display('2')" /> </td>
+                                    <td><input type="button" value="3" onclick="display('3')" /> </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="-" onclick="display('-')" /> </td>
+                                    <td><input type="button" value="4" onclick="display('4')" /> </td>
+                                    <td><input type="button" value="5" onclick="display('5')" /> </td>
+                                    <td><input type="button" value="6" onclick="display('6')" /> </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="*" onclick="display('*')" /> </td>
+                                    <td><input type="button" value="7" onclick="display('7')" /> </td>
+                                    <td><input type="button" value="8" onclick="display('8')" /> </td>
+                                    <td><input type="button" value="9" onclick="display('9')" /> </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="/" onclick="display('/')" /> </td>
+                                    <td><input type="button" value="." onclick="display('.')" /> </td>
+                                    <td><input type="button" value="0" onclick="display('0')" /> </td>
+                                    <td><input type="button" value="=" onclick="evaluate()" /> </td>
+                                </tr>
+                            </table>
+                        </center>
+
+
+                        <script>
+                            function display(val) {
+                                document.getElementById("textval").value += val
+                            }
+                            function evaluate() {
+                                let x = document.getElementById("textval").value
+                                let y = eval(x)
+                                document.getElementById("textval").value = y
+                            }
+                            function clr() {
+                                document.getElementById("textval").value = ""
+                            }
+                        </script>
+
+
+
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <center><button id="btn">Change Background Color</button></center>
+                        <script language="javascript">
+                            const btn = document.getElementById("btn");
+
+                            btn.addEventListener("click", () => {
+                                document.body.style.background = randomBg();
+                            });
+
+                            function randomBg() {
+                                return `hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`;
+                            }
+                        </script>
+
+                    </body>
+
+        </div>
+        <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
+
+
+        <!----------------------------------Begin the footer------------->
+        <div class="wideMargin" id="footer">
+            <p>
+                Webpage made by <a href="index.html" target="_blank">Kevin Doan</a>
+            </p>
+        </div>
+        <!----------------------------------End the footer------------->
+</body>
+
+</html>
