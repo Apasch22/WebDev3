@@ -1,0 +1,24 @@
+.body-wideMargin {
+    margin: 50px;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: Roboto;
+  }
+  button{
+    padding:5px;
+  }
+  
+  ol {
+  
+    list-style-type: decimal-leading-zero;
+  }
+  
+  ol ol {
+    margin-left: 0.9em;
+  }
+  
+  ol li {
+  
+    line-height: 1.5;
+  }
+  
