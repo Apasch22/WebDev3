@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Version 5.0
+    Name:
+    Date Completed:
+-->
+
+  <head>
+    <script src="JS/script.js"></script>
+    <title>JavaScript</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="SHS WebDev JavaScript Practice" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/script.js"></script>
+
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+      .menu {
+        margin: 0px;
+      }
+
+      .wideMargin {
+        margin: 15px;
+      }
+
+      #footer {
+        font-size: 12px;
+        text-align: center;
+      }
+    </style>
+    	<link rel="stylesheet" type="text/css" href="style.css">
+      <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>	
+  </head>
+
+  <body>
+    <!---------------------------------- Begin the nav-bar ------------->
+    <div class="menu">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="http://shakonet.isd720.com/WebDev" class="navbar-brand"
+          >WebDev</a
+        >
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+            <a href="script.html" class="nav-item nav-link">Home</a>
+            <a href="tip.html" class="nav-item nav-link" tabindex="-1"
+              >tip calculator</a
+            >
+            <a href="list.html" class="nav-item nav-link" tabindex="-1"
+              >To Do List</a
+            >
+            <a href="#" class="nav-item nav-link disabled" tabindex="-1"
+              >Games</a
+            >
+            <a href="script.html" class="nav-item nav-link active" tabindex="-1"
+              >JavaScript</a
+            >
+            <a
+              href="mailto:sample@gmail.com?Subject=Hello"
+              class="nav-item nav-link disabled"
+              tabindex="-1"
+              >Contact</a
+            >
+            <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+          </div>
+          <div class="navbar-nav ml-auto">
+            <a href="#" class="nav-item nav-link disabled">Login</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!---------------------------------- End the nav-bar ------------->
+    <script type="text/javascript" src="script.js"></script>
+  <!-- 	<script type="text/javascript" src="colorGame.js"></script>
+   -->
+    <div class="wideMargin" id="content">
+      <h1 class="text-left my-3">My JavaScript Examples</h1>
+      <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+        </div> 
+        <center>
+          <SCRIPT name = "JavaScript">
+          function variables(){
+              t = 1;
+              change = 1;    
+              empty1 = -1;
+              empty2 = -1;
+              empty3 = -1;
+              empty4 = -1;
+              empty5 = -1;
+              empty6 = -1;
+              empty7 = -1;
+              empty8 = -1;
+              empty9 = -1;
+              return;
+              whogoesnow = "P1 GO"
+          }
+          
+          function win(){
+            if   (empty1==empty2 && empty2==empty3 && empty3==0 ||
+          empty4==empty5 && empty5==empty6 && empty6==0 ||    
+                  empty7==empty8 && empty8==empty9 && empty9==0 ||
+                  empty1==empty4 && empty4==empty7 && empty7==0 ||
+                  empty2==empty5 && empty5==empty8 && empty8==0 ||
+                  empty3==empty6 && empty6==empty9 && empty9==0 ||
+                  empty1==empty5 && empty5==empty9 && empty9==0 ||
+                  empty3==empty5 && empty5==empty7 && empty7==0 ){
+                  alert ("P2 WON");          
+                  history.go(0)  
+            }
+            if   (empty1==empty2 && empty2==empty3 && empty3==1 ||
+          empty4==empty5 && empty5==empty6 && empty6==1 ||    
+                  empty7==empty8 && empty8==empty9 && empty9==1 ||
+                  empty1==empty4 && empty4==empty7 && empty7==1 ||
+                  empty2==empty5 && empty5==empty8 && empty8==1 ||
+                  empty3==empty6 && empty6==empty9 && empty9==1 ||
+                  empty1==empty5 && empty5==empty9 && empty9==1 ||
+                  empty3==empty5 && empty5==empty7 && empty7==1 ){
+                  alert ("P1 WON");
+              history.go(0)
+            }
+          }
+          
+          function turnchange(t){
+            if (change == 1)  {
+              if (t == 0){
+                  t = 1;
+                  whogoesnow = "P" + 1
+              }
+              else {
+                  t = 0;
+              whogoesnow = "P" + 2
+              }
+              
+            }
+            else {
+              t = t;
+            }
+            change = 1  
+            return (t); 
+          }
+          
+          function changing(clicked){
+          if (clicked == 1){            
+             spot = empty1 ;}
+          if (clicked == 2){
+             spot = empty2 ;}
+          if (clicked == 3){
+             spot = empty3 ;}
+          if (clicked == 4){
+             spot = empty4 ;}
+          if (clicked == 5){
+             spot = empty5 ;}
+          if (clicked == 6){
+             spot = empty6 ;}
+          if (clicked == 7){
+             spot = empty7 ;}
+          if (clicked == 8){
+             spot = empty8 ;}
+          if (clicked == 9){
+             spot = empty9 ;}
+          
+          if (spot == -1){
+             if (t == 0){
+                xo = "  O  " ;	       	          
+                spot = 0             
+             }
+             else {
+                xo = "  X  "  ;              
+                spot = 1	     
+             }                              
+             if (clicked == 1){            
+                empty1 = spot;}
+             if (clicked == 2){
+                empty2 = spot ;}
+             if (clicked == 3){
+                empty3 = spot ;}
+             if (clicked == 4){
+                empty4 = spot ;}
+             if (clicked == 5){
+                empty5 = spot ;}
+             if (clicked == 6){
+                empty6 = spot ;}
+             if (clicked == 7){
+                empty7 = spot ;}
+             if (clicked == 8){
+                empty8 = spot ;}
+             if (clicked == 9){
+                empty9 = spot ;}
+          } 
+          else {
+             if (spot == 0){
+                 xo = "  O  ";}
+             if (spot == 1){
+                 xo = "  X  ";}
+             change = 0
+          }
+          return (xo) ;
+          }
+          
+          function change_b1(form){	
+              clicked = 1;    
+              changing(clicked) ;     
+              t = turnchange(t) ;  
+              form.b1.value = xo; 
+              form.whoseturn.value = whogoesnow        
+              win(); 
+             return;
+          }
+          function change_b2(form){	
+              clicked = 2;
+              changing(clicked) ;   
+              form.b2.value = xo;    
+              t = turnchange(t) ;
+              form.whoseturn.value = whogoesnow      
+              win();
+              return;
+          }
+          
+          function change_b3(form){	
+              clicked = 3;
+              changing(clicked) ;
+              form.b3.value = xo;         
+              t = turnchange(t) ;    
+              form.whoseturn.value = whogoesnow 
+              win();
+              return;   
+          }
+          
+          function change_b4(form){	
+              clicked = 4;
+              changing(clicked) ;
+              form.b4.value = xo;    
+              t = turnchange(t) ;    
+              form.whoseturn.value = whogoesnow     
+              win();
+              return;
+          }
+          
+          function change_b5(form){	
+              clicked = 5;
+              changing(clicked) ;
+              form.b5.value = xo;    
+              t = turnchange(t) ;
+              form.whoseturn.value = whogoesnow     
+              win();     
+              return;
+          }
+          
+          function change_b6(form){	
+              clicked = 6;
+              changing(clicked) ;
+              form.b6.value = xo;    
+              t = turnchange(t) ;
+              form.whoseturn.value = whogoesnow     
+              win();
+              return;
+          }
+          
+          function change_b7(form){	
+              clicked = 7;
+              changing(clicked) ;
+              form.b7.value = xo;    
+              t = turnchange(t) ; 
+              form.whoseturn.value = whogoesnow    
+              win();
+              return;
+          }
+          
+          function change_b8(form){	
+              clicked = 8;
+              changing(clicked) ;    
+              form.b8.value = xo;    
+              t = turnchange(t) ;
+              form.whoseturn.value = whogoesnow 
+              win();    
+              return;
+          }
+          
+          function change_b9(form){	
+              clicked = 9;
+              changing(clicked) ;
+              form.b9.value = xo;    
+              t = turnchange(t) ;
+              form.whoseturn.value = whogoesnow  
+              win();
+              return;
+          }
+          </SCRIPT>
+          
+          
+          <SCRIPT name = "JavaScript">
+          variables();
+          </SCRIPT>
+          
+          <FORM>
+          <input type = "button" name = "whoseturn" 
+           value = "P1">	 
+          <br><br><br><br>
+          <table>
+          <tr><td><input type = "button" name = "b1" value = "      "		 onClick =
+          change_b1(this.form)>  
+              <td><input type = "button" name = "b2" value = "      "		 onClick = change_b2(this.form)> 
+              <td><input type = "button" name = "b3" value = "      "		 onClick =
+          change_b3(this.form)> 
+          <tr><td><input type = "button" name = "b4" value = "      "		 onClick =
+          change_b4(this.form)> 
+              <td><input type = "button" name = "b5" value = "      "		 onClick = change_b5(this.form)> 
+              <td><input type = "button" name = "b6" value = "      "		 onClick =
+          change_b6(this.form)> 
+          <tr><td><input type = "button" name = "b7" value = "      "		 onClick =
+          change_b7(this.form)> 
+              <td><input type = "button" name = "b8" value = "      "		 onClick = change_b8(this.form)>   
+              <td><input type = "button" name = "b9" value = "      "
+          onClick = change_b9(this.form)> 
+          </table>
+          <br><br>
+          
+          <INPUT TYPE="button" VALUE="New Game" onClick="history.go(0)">
+          </center>
+                
+    <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
+
+    <!---------------------------------- Begin the footer ------------->
+    <div class="wideMargin" id="footer">
+      <p>
+        Webpage made by <a href="index.html" target="_blank">[your name]</a>
+      </p>
+    </div>
+    <!---------------------------------- End the footer ------------->
+  </body>
+</html>
